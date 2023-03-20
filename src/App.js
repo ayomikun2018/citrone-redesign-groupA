@@ -1,9 +1,9 @@
 import React from "react";
 import {Route, Routes} from 'react-router';
-import LandingPage from "./components/Pages/LandingPage";
-import Signup from "./components/Pages/Signup";
-import Login from "./components/Pages/Login";
-import Dashboard from "./components/Pages/Dashboard";
+import LandingPage from "./components/Pages/LandingPage/LandingPage";
+import Signup from "./components/Pages/Signup/Signup";
+import Login from "./components/Pages/Login/Login";
+import Dashboard from "./components/Pages/Dashboard/Dashboard";
 function App() {
   return (
   
