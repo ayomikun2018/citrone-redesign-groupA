@@ -1,0 +1,40 @@
+.reporting {
+  padding: 70px 40px;
+  display: flex;
+  height: 580px;
+  /* border: 1px solid green; */
+  gap: 100px;
+}
+.reporting img {
+  width: 517px;
+  height: 440px;
+  left: 40px;
+  top: 1210px;
+
+}
+.reporting h2 {
+  width: 185px;
+  height: 40px;
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 39px;
+  color: #757575;
+}
+.reporting h1 {
+  width: 460px;
+  margin-top: 30px;
+  height: 55px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  color: #f64f59;
+}
+.reporting p {
+  margin-top: 30px;
+  width: 621px;
+  height: 54px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}

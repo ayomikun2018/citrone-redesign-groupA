@@ -1,0 +1,55 @@
+.joining {
+  /* border: 1px solid green; */
+  background-color: #fff4f4;
+  padding: 40px;
+  height: 75vh;
+  width: 100vw;
+  display: flex;
+}
+.joining h1 {
+  /* position: absolute; */
+
+  width: 819px;
+  height: 140px;
+  left: 40px;
+  top: 221px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  text-transform: capitalize;
+  margin-top: 60px;
+}
+.joining p {
+  /* position: absolute; */
+  width: 819px;
+  height: 100px;
+  left: 43px;
+  top: 401px;
+  /* font-style: normal; */
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 39px;
+  padding-left: 3px;
+}
+.joining button {
+  gap: 10px;
+  width: 213px;
+  height: 72px;
+  background: #f64f59;
+  margin-right: 12rem; 
+  color: #FDDCDE;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  /* margin-right:800px; */
+  /* border: 1px solid green; */
+}
+.joining button:hover {
+  background-color: white;
+  color: #f64f59;
+}
+.joining img {
+  margin-top: 50px;
+}
