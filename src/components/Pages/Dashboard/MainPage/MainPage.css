@@ -1,0 +1,20 @@
+*{
+    /*       <div className='absolute w-full min-w-100vw h-full z-auto left-14 bottom-9 bg-#E5E5E5 '>
+ */
+}
+.dashboard-body-container{
+    width: 120%;
+    height:250vh;
+    z-index: inherit;
+    position: absolute;
+    top: 12%;
+    left: 0%;
+    bottom: 20%;
+    background-color: #f1f1f1;
+}
+/* .body-rectangle1{
+    width: 664px;
+    height: 226px;
+    display: flex;
+
+} */

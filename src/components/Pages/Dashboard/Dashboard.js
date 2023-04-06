@@ -1,9 +1,17 @@
 import React from 'react'
-export default function Dashboard() {
-    return (
-        <div >
-            <h1 >This is the Dashboard Page</h1>
-           
-        </div>
-    )
+import Navbar from '../../Navigation/Navbar/Navbar'
+import Sidebar from '../../Navigation/Sidebar/Sidebar'
+import MainPage from './MainPage/MainPage'
+
+
+const Dashboard = () => {
+  return (
+    <div className=''>
+       <Navbar />
+       <Sidebar />
+       <MainPage />
+    </div>
+  )
 }
+
+export default Dashboard
