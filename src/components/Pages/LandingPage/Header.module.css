@@ -1,65 +1,101 @@
-button{
-  margin-left:50px;
-  border: 1px solid green;
+.header{
+  width: 100%;
+  height: 130px;
+  background: #FFF4F4;
+  box-shadow: 0px 1px 22px rgba(0, 0, 0, 0.11);
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  
+}
+.navDiv{
+  display: flex;
+  /* flex-direction:row ; */
+  align-items: center;
+  gap: 50px;
+  
+}
+.navLogo{
+  display: flex;
+  align-items: center;
+}
+.navUl{
+  display: flex;
+  gap: 50px;
+  font-weight: 400;
+  font-size: 18px;
+  /* flex-direction:row ; */
+}
+.login{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+h1{
+  font-weight: 600;
+  font-size: 28px;
+}
+p{
+  font-weight: 400;
+ font-size: 18px;
+}
+img{
+  width: 71px;
+  height: 71px;
+}
+.header button{
+  /* margin-left:50px; */
   height: 60px;
   width: 141px;
-  margin:50px 60px 20px 50px;
   border: 0.6px solid #F64F59;
   border-radius: 15px;
   font-size: 16px;
-  line-height: 24px;
   font-weight: 500;
   color: #F64F59;
   transition-duration: 0.4s;
 }
- button:hover {
+.header button:hover {
   background-color: #F64F59;
   color: white; 
 }
-ul{
-  box-shadow: 0px 1px 22px rgba(0, 0, 0, 0.11);
+ 
+@media (max-width: 768px){
+  .header{
+    height: 100px;
+    position: sticky;
+    top: 0;
+  }
+ .navUl{
+  display: none;
+ }
+  .login p{
+  display: none;
+
+ }
+ img{
+  width: 30px;
+  height: 30px;
+ }
+ h1{
+  font-weight: 600;
+  font-size: 16px;
+ }
+.header  button{
+  height: 40px;
+  width: 97px;
+  border: 0.6px solid #F64F59;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #F64F59;
+  transition-duration: 0.4s;
+}
+.header button:hover {
+  background-color: #F64F59;
+  color: white; 
 }
 
-  /* .nav-div {background-color: #fff4f4;
-    border: 1px solid green;
-    height: 18vh;
-    box-shadow: 0px 1px 22px rgba(0, 0, 0, 0.11);
-    position: sticky;
-  }
-  .nav-list {
-    display: flex;
-    
-  }
-  .citron-logo {
-    
-    height: 4.4rem;
-    width: 4.4rem;
-    top: 0;
-    left: 0;
-    margin: 46px 0px 13px 31px;
-  }
-  h1{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 42px;
-    margin: 60px 0px 28px 0px;
-  }
-  li{
-      font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  margin:70px 0px 33px 0px;
-  }
-  .about{
-    margin-left:65px;
-  }
-  .contact{
-    margin-left:65px;
-  }
-  .account{
-    margin-left:25rem;
-  } */
-  
-  /* className={' ml-12 h-14 w-36 mt-12 mr-14 mb-5 ml-12 border-orange-500 border-2 rounded-2xl leading-6 font-medium text-orange-500 text-base hover:bg-red-400 ...'} */
-  /* -limitation hover text color and font weight */
+}

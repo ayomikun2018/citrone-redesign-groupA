@@ -5,7 +5,7 @@ export default function Learning() {
   return (
     <div>
       <section className={classes.learning}>
-        <div>
+        <div className={classes.text}>
           <h2>EFFECTIVE LEARNING</h2>
           <h1>Engaging and effective training</h1>
           <p>
@@ -13,7 +13,7 @@ export default function Learning() {
             self assessments, certificates, and much more
           </p>
         </div>
-        <div>
+        <div className={classes.image}>
         <img src={onlineLearning} alt="online-learning" />
         </div>
       </section>

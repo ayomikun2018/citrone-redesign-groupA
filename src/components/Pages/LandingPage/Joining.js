@@ -5,7 +5,7 @@ import img from "././landingPageAssets/Kids Studying from Home-rafiki 1.svg";
 export default function Joining() {
   return (
     <div className={classes.joining}>
-      <section className={"joining-sectionA" }>
+      <section className={classes.sectionA }>
         <h1 >We make learning and communication easy & fun for everyone</h1>
         <p>
           Citrone makes it easy for educators to create learning experiences
@@ -15,7 +15,8 @@ export default function Joining() {
           <button>Join for free</button>
         </Link>
       </section>
-      <section className={"joining-sectionB"}>
+      <section className={classes.sectionB}>
+      <h1 className={classes.noDisplay}>We make learning and communication easy & fun for everyone</h1>
         <img src={img} alt="studying" className={classes["studying-logo"]} />
       </section>
     </div>

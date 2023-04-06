@@ -23,10 +23,10 @@ export default function Community() {
         </div>
       </section>
       <section className={classes.communityB}>
-        <div>
+        <div  className={classes.communityImg}>
         <img src={workChat} alt="work-chat" className={classes["work-chat"]} />
         </div>
-        <div>
+        <div className={classes.communityText}>
         <h2>COMMUNITY FIRST</h2>
         <h1>Nurture a community- first learning experience.</h1>
         <p>

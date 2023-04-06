@@ -5,6 +5,7 @@ import LandingPage from "./components/Pages/LandingPage/LandingPage";
 import Signup from "./components/Pages/Signup/Signup";
 import Login from "./components/Pages/Login/Login";
 import Dashboard from "./components/Pages/Dashboard/Dashboard";
+// import Assignments from "./components/Pages/Assignments/Assignments";
 function App() {
   return (
   
@@ -13,6 +14,8 @@ function App() {
    <Route exact path= '/signup' element = {<Signup/>}/>
    <Route exact path= '/login' element = {<Login/>}/>
    <Route exact path= '/dashboard' element = {<Dashboard/>}/>
+   {/* <Route exact path= '/assignments' element = {<Assignments/>}/> */}
+
    </Routes>
   );
 }

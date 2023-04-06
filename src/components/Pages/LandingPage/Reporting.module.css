@@ -1,16 +1,19 @@
 .reporting {
   padding: 70px 40px;
   display: flex;
-  height: 580px;
-  /* border: 1px solid green; */
+  flex-direction: row;
+  height: 100%;
   gap: 100px;
 }
 .reporting img {
   width: 517px;
   height: 440px;
-  left: 40px;
-  top: 1210px;
-
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
 }
 .reporting h2 {
   width: 185px;
@@ -18,23 +21,54 @@
   margin-top: 30px;
   font-weight: 500;
   font-size: 26px;
-  line-height: 39px;
   color: #757575;
 }
 .reporting h1 {
   width: 460px;
-  margin-top: 30px;
   height: 55px;
   font-weight: 500;
   font-size: 32px;
-  line-height: 48px;
   color: #f64f59;
 }
 .reporting p {
-  margin-top: 30px;
   width: 621px;
   height: 54px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 27px;
+}
+@media (max-width: 768px){
+  .reporting {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 70px 20px;
+  
+    gap: 20px;
+  }
+  .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+  .reporting p {
+    font-weight: 400;
+    font-size: 14px;
+    width: 350px;
+    /* padding-bottom: 20px; */
+  }
+  .reporting img {
+    width: 350px;
+    height: 295px;
+  }
+  .reporting h1 {
+    font-weight: 500;
+    font-size: 16px;
+    width: 211px;
+    /* height: 55px; */
+  }
+  .reporting h2 {
+    font-weight: 500;
+    font-size: 16px;
+  }
 }
