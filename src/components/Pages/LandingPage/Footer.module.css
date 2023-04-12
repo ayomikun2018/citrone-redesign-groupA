@@ -1,0 +1,86 @@
+
+  
+.footer{
+    height: 100%;
+    /* padding: 60px 100px 130px 100px; */
+    background-color: #242424 ; 
+    display: flex;
+    flex-direction: row;
+    gap: 140px;
+    justify-content: space-between;
+    padding-left:  100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+.footer div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* border: 1px solid red; */
+}
+/* .company{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+
+}
+.services{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.legal{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+} */
+.footer div{
+    /* background: #242424; */
+}
+.footer h3{
+    width: 201px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #F64F59;
+}
+
+.footer p{
+/* margin-top: 10px; */
+color: #FBFBFB;
+font-weight: 500;
+    font-size: 16px;
+/* background: #242424; */
+}
+@media (max-width: 768px){
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 35px;
+        gap: 35px;
+        
+    }
+    .office {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 227px;
+height: 53px;
+margin-bottom: 100px;
+    }
+    .footer p{
+        font-size: 14px;
+        
+    }
+    /* .paragraphs{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } */
+}

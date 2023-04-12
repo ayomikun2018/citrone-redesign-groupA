@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import Navbar from '../../Navigation/Navbar/Navbar'
 import Sidebar from '../../Navigation/Sidebar/Sidebar'
@@ -46,4 +47,21 @@ const Dashboard = (props) => {
 }
 
 
+=======
+import React from 'react'
+import Navbar from '../../Navigation/Navbar/Navbar'
+import Sidebar from '../../Navigation/Sidebar/Sidebar'
+
+
+const Dashboard = () => {
+  return (
+    <div>
+       <Navbar />
+       <Sidebar />
+       
+    </div>
+  )
+}
+
+>>>>>>> 9c3081b9609364e8e5dba4c5b2e8f6b35978202c
 export default Dashboard
