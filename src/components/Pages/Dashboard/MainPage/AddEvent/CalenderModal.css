@@ -1,0 +1,81 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Modal styles */
+  .start-modal {
+    position: fixed;
+    z-index: 999;
+    top: 20%;
+    left: 110%;
+     width: 30%;
+    height: 30%; 
+  display: grid;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .start-modal-content {
+    width: 245px;
+    height: 196px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+
+  }
+  
+  /* Calendar styles */
+  .start-calendar-modal {
+  } 
+  
+  .start-calendar-header {
+    width: 100%;
+     display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    
+    /* margin-bottom: 20px; */
+  } 
+  
+  /* .startprev-month,
+  .start-next-month {
+    font-size: 20px;
+    cursor: pointer;
+  }  */
+  .current-month {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .start-calendar-days {
+    width: 70%;
+    display: grid;
+    /* grid-template-columns: repeat(7, 1fr); */
+  }
+  
+  .week {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    padding: 3px;
+  }
+  
+  .day {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .today {
+    width: 25px;
+    height: 25px;
+    background-color: #f64f59;
+    color: #fff;
+    border-radius: 20%;
+  }
+ 
