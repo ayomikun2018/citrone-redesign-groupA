@@ -1,0 +1,93 @@
+.community{
+    padding-left:17.3% ;
+    padding-top: 5.6%;
+    /* width: 100%; */
+    
+}
+.top{
+    height: 90px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid rgb(101, 149, 101); */
+    padding: 40px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    
+}
+.breadcrumbs{
+    font-size: 14px;
+}
+.spanB{
+    color:#F64F59;
+    font-size: 14px;
+    
+}
+.inputContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ 
+    gap: 24px;
+
+}
+.inputContainer img{
+    height: 18px;
+    width: 16px;
+}
+.input{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #A3A3A3;
+    /* border: 1px solid rgb(101, 149, 101); */
+    height: 40px;
+    width: 324px;
+    border-radius: 10px;
+    align-items: center;
+    background-color: #FBFBFB;
+    /* position: relative; */
+}
+.input input[type='text']{
+    outline: none;
+    width: 100%;
+    background-color: #FBFBFB;
+}
+.input ::placeholder{
+    font-size: 14px;
+    outline: none;
+   /* width: 100px; */
+   
+}
+.input img{
+    height: 20px;
+    width: 20px;
+    /* padding: 5px; */
+    /* position: absolute; */
+}
+.bottom{
+    /* padding:15px ; */
+    /* padding: 0px 40px; */
+
+}
+.bottom h1{
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 40px;
+    /* border: 1px solid rgb(101, 149, 101); */
+}
+.bottom h2{
+    font-weight: 600;
+    font-size: 20px;
+    /* border: 1px solid rgb(101, 149, 101); */
+    color:#F64F59;
+    margin-top: 10px;
+    padding: 0px 40px;
+    /* margin-bottom: 10px; */
+
+
+}

@@ -2,8 +2,8 @@
     box-sizing: border-box;
 }
 .sidebar{
-    
-    height: 70rem;
+    min-height: 100vh;
+    height: 764px;
     width: 250px;
     background: white;
     border-right: 1px solid #D2D2D2;
@@ -52,7 +52,6 @@
     background: #FDDCDE;
     color: black;
 }
-
  #active::before {
     content: '';
     background: #F64F59;
@@ -65,7 +64,6 @@
     transition: 0.5s;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-
 } */
 
 

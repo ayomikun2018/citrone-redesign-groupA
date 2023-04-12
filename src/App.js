@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css'
 import {Route, Routes} from 'react-router';
 import LandingPage from "./components/Pages/LandingPage/LandingPage";
 import Signup from "./components/Pages/Signup/Signup";
@@ -7,6 +8,9 @@ import Dashboard from "./components/Pages/Dashboard/Dashboard";
 import ForgotPassword from "./components/Pages/Login/ForgotPassword";
 import ResetPassword from "./components/Pages/Login/ResetPassword";
 import Courses from "./components/Pages/Courses/Courses";
+import Community from "./components/Pages/Community/Community";
+import Help from "./components/Pages/Help/Help";
+// import Assignments from "./components/Pages/Assignments/Assignments";
 function App() {
   return (
   
@@ -18,7 +22,14 @@ function App() {
     <Route exact path= '/forgotpassword' element= {<ForgotPassword />} />
     <Route exact path= '/resetpassword' element= {<ResetPassword />} />
     <Route exact path= '/courses' element= {<Courses />} />
-    </Routes>
+    <Route exact path= '/community' element = {<Community/>}/>
+   <Route exact path= '/help' element = {<Help/>}/>
+
+
+   {/* <Route exact path= '/assignments' element = {<Assignments/>}/> */}
+
+
+   </Routes>
   );
 }
 
