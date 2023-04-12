@@ -1,19 +1,45 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom' 
-import ToggleBtn from '../../DashboardAssets/Toggles1.svg'
 import TimeModal from "./TimeModal"
 import CalenderModal from './CalenderModal'
+import UpDownBtn from '../../DashboardAssets/shape1.svg'
+import RepeatButton from './RepeatButton'
+import AlertBtn from './AlertBtn'
+import SwitchToggler from './SwitchToggler'
+import './AddEvents.css'
 
-const AddEvents = () => {
-    const [description, setDescription] = useState(false)
-    const [title, setTitle] = useState('')
-    const [location, setLocation] = useState('')
+const AddEvents = ({dater}) => {
+    const [formData, setFormData] = React.useState(
+        {title: "", location: ""}
+    )
 
+    console.log(formData)
+// form input starts here
+    const handleChange = (event) => {
+        setFormData(prevFormData => {
+            return {
+                ...prevFormData,
+                [event.target.value] : event.target.value
+            }
+        })
+        
+    }
+
+    const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(e);
+  
+}
+
+    // Toggle Button
+    const [isToggled, setIsToggled] = useState(false)
 
     //Time-Set-Modal
     const [eventTime, setEventTime] = useState(null);
     const [showModal, setShowModal] = useState(false);
   
+    
+
     const handleEventTimeClick = () => {
       setShowModal(true);
     };
@@ -36,94 +62,93 @@ const AddEvents = () => {
 
     const handleEventDateClick = () => {
         setShowCalenderModal(true)
-
-    }
-    const handleDateModalClose = () => {
-        setShowCalenderModal(true)
+        setEventDate()
     }
 
-    const handleDateClick = (day) => {
-        setShowCalenderModal()
-        setEventDate(day)
+    const handleDateClick = () => {
+        setShowCalenderModal(false)
+       
         
     }
+    const toggleModal = () => {
+        setShowCalenderModal(!showCalenderModal);
+      };
 
 // Ends Calender date
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(e);
-      
-    }
+
   return (
-    <div className='relative '>
+    <div className='relative font-poppins'>
         <form 
         onSubmit={handleSubmit}
         className=' flex items-center justify-center h-screen'>
 
             {/* Form control field */}
-            <div className=' w-8/12 h-fit p-8 mt-20 mb-20 items-center place-items-center bg[#f64f59] grid shadow-md'>
-                <div className='flex mb-14 space gap-72 items-center justify-center'>
-                    <p className='text-base font-medium text-gray-400'>Cancel</p>
-                    <p className=' text-lg font-medium text-black'>New Events</p>
-                    <Link to='/dashboard'><button className=' w-24 h-10 text-base font-medium border rounded-full border-solid border-red-500 text-red-500'>Add Event</button></Link>
+            <div className='add-events-container absolute p-2 top-20 items-center place-items-center bg-[#f1f1f1] grid shadow-md font-poppins'>
+                <div className='flex -top-14 gap-56 items-center justify-center'>
+                    <Link to='/dashboard'>
+                        <p className='text-base font-medium text-gray-400 hover:text-[#f64f59]'>Cancel</p>
+                    </Link>
+                        <p className=' text-lg font-medium text-black whitespace-nowrap'>New Events</p>
+                    <Link to='/dashboard'><button className=' w-28 h-12 text-base font-medium border rounded-full border-solid border-red-500 text-red-500'>Add Event</button></Link>
                 </div>
 
-            
-                <input 
-                    onChange={(e) => setTitle(e.target.value)} 
-                    value={title} 
-                    placeholder='Title' 
-                    className=' w-10/12 h-10 drop-shadow-md rounded-t-lg pl-8' 
-                />
+                <div className='grid items-center place-items-center'>
+                    <input 
+                        onChange= {handleChange} 
+                        value={formData.title} 
+                        name="title"
+                        placeholder='Title' 
+                        className='title-input absolute top-44 h-12 drop-shadow-md rounded-t-lg pl-8 focus:outline-none' 
+                    />
 
-                <input 
-                    onChange={(e) => setLocation(e.target.value)} 
-                    value={location} 
-                    placeholder='Location' 
-                    className='w-10/12 h-10 mt-18 border drop-shadow-md rounded-b-lg pl-8' 
-                />
+                    <input 
+                        onChange={handleChange} 
+                        value={formData.location}
+                        name="location" 
+                        placeholder='Location' 
+                        className='location-input absolute h-12 top-56 border drop-shadow-md rounded-b-lg pl-8 focus:outline-none' 
+                    />
            
-            
+                </div>
             
           
-                <div className=' relative grid w-full h-80 top-18 items-center  place-items-center'>
-                    <div className='absolute z-10 top-12 flex w-10/12 h-12 rounded-t-lg border bg-white space-x-72 gap-64 drop-shadow-md'>
-                        <p className=' p-2 ml-6 whitespace-nowrap text-semibold font-md flex items-center'>All-day</p>
-                        <div className=''><img src={ToggleBtn} alt="toggle" className='mt-2 ml-4 flex items-center'/></div>
-
+                <div className=' relative grid w-full h-80 -top-32 items-center  place-items-center font-poppins'>
+                    <div className=' all-day absolute z-10 top-12 flex h-12 rounded-t-lg border bg-white space-x-72 gap-64 drop-shadow-md'>
+                        <p className=' p-2 ml-6 whitespace-nowrap text-semibold font-md flex items-center font-poppins'>All-day</p>
+                        <SwitchToggler rounded={true} isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} />
                     </div>
-                    <div className=' z-10 absolute flex w-10/12 h-12 bottom-44 bg-white border space-x-64 gap-56 drop-shadow-md'>
-                        <p className='p-2 ml-6 text-semibold font-md flex items-center'>Start</p>
+                    <div className='start z-10 absolute flex h-12 bottom-44 bg-white border space-x-64 gap-56 drop-shadow-md'>
+                        <p className='p-2 ml-6 text-semibold font-md flex items-center font-poppins'>Start</p>
                         <div className='flex items-center justify-center gap-2'>
-                            <button className='whitespace-nowrap w-20 h-7 bg-zinc-300 text-sm font-md rounded-md p-2 flex items-center' onClick={handleEventDateClick}>{eventDate ? eventDate : 'Jan 5, 2023'} </button>
-                            {showCalenderModal && <CalenderModal onclose={handleDateModalClose} onTimeClick={handleDateClick}/>}
+                            <button className='whitespace-nowrap w-16 h-8 bg-zinc-300 text-sm font-md rounded-md p-2 flex items-center' onClick={handleEventDateClick}>{eventDate ? eventDate : 'Jan 5, 2023'}</button>
+                            {showCalenderModal && <CalenderModal onclose={toggleModal} onTimeClick={handleDateClick}/>}
 
-                            <button className='whitespace-nowrap w-16 h-7 bg-zinc-300 text-sm font-md rounded-md p-2 flex items-center' onClick={handleEventTimeClick}> {eventTime ? eventTime : '1.00PM'}</button>
+                            <button className='whitespace-nowrap w-16 h-8 bg-zinc-300 text-sm font-md rounded-md p-2 flex items-center' onClick={handleEventTimeClick}> {eventTime ? eventTime : '1.00PM'}</button>
                             {showModal && <TimeModal onClose={handleModalClose} onTimeClick={handleTimeClick} />}
                         </div>
                     </div>
-                    <div className=' absolute flex w-10/12 h-12 p-2 bottom-32 bg-white border space-x-60 gap-64 drop-shadow-md'>
-                        <p className='  pl-2  ml-4 text-semibold font-md flex items-center'>End</p>
+                    <div className='end z-0 absolute flex h-12 p-2 bottom-32 bg-white border space-x-60 gap-64 drop-shadow-md'>
+                        <p className='  pl-2  ml-4 text-semibold font-md flex items-center font-poppins'>End</p>
                         <div className='flex items-center justify-center gap-2 '>
-                            <div className='whitespace-nowrap w-20 h-7 bg-zinc-300 text-sm font-md rounded-md p-2 flex items-center ' >Jan 5, 2023</div>
-                            <div className='whitespace-nowrap w-16 h-7 bg-zinc-300 text-sm font-md rounded-md p-2 flex items-center'>1.00PM</div>
+                            <div className='whitespace-nowrap w-20 h-7 bg-zinc-300 text-sm font-md rounded-md p-2 flex items-center font-poppins ' >Jan 5, 2023</div>
+                            <div className='whitespace-nowrap w-16 h-7 bg-zinc-300 text-sm font-md rounded-md p-2 flex items-center font-poppins'>1.00PM</div>
                             
                         </div>
 
                     </div>
-                    <div className='  absolute flex w-10/12 h-12 bottom-20 bg-white border space-x-64 gap-56 drop-shadow-md'>
-                        <p className='p-2 ml-6 text-semibold font-md flex items-center'>Repeat</p>
-                        <div className='flex'>
-                            <p className='flex items-center' >Never</p>
-                            <div className='flex items-center'>1.00PM</div>
+                    <div className='repeat z-0 absolute flex h-12 bottom-20 bg-white border space-x-64 gap-x-72 drop-shadow-md font-poppins'>
+                        <p className='p-2 ml-6 text-semibold font-md flex items-center font-poppins'>Repeat</p>
+                        <div className='flex items-center justify-center gap-4'>
+                            <RepeatButton />
+                            <img src={UpDownBtn} alt="up-down-tn" className=''/>
                         </div>
                     </div>
-                    <div className=' absolute flex w-10/12 h-12 bottom-8 bg-white rounded-b-lg border space-x-64 gap-56 drop-shadow-md'>
-                        <p className='p-2 ml-6 text-semibold font-md flex items-center'>Alert</p>
-                        <div className='flex'>
-                            <p className='flex items-center' >Never</p>
-                            <div className='flex items-center'>1.00PM</div>
+                    <div className='alert z-0 absolute flex h-12 bottom-8 bg-white rounded-b-lg border space-x-64 gap-80 drop-shadow-md font-poppins'>
+                        <p className='p-2 ml-6 text-semibold font-md flex items-center font-poppins'>Alert</p>
+                        <div className='flex items-center ml-20 justify-center gap-4'>
+                            <AlertBtn />
+                            <img src={UpDownBtn} alt="up-down-tn" className=''/>
                         </div>
                     </div>
 

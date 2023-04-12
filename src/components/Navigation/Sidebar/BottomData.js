@@ -1,6 +1,7 @@
 import * as DownBsIcons from "react-icons/bs";
 import * as DownIoIcons from "react-icons/io";
 import * as DownFiIcons from "react-icons/fi";
+import LogoutModal from "../../Pages/Logout/LogoutModal";
 
 
 const BottomData_ = [
@@ -20,7 +21,7 @@ const BottomData_ = [
         id:3,
         icon: < DownFiIcons.FiLogOut />,
         title: 'Logout',
-        link: '/logout'
+        link: "/logout"
     },
 
 ]

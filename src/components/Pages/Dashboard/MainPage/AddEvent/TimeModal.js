@@ -15,23 +15,24 @@ function Modal({ onTimeClick, showModal, handleModalClose }) {
   }
 
   return (
-    <div className="z-30 fixed -right-2 -bottom-80 w-28 h-fit  bg-white shadow-md rounded-lg">
+    <div className="z-30 fixed -right-2 -bottom-96 w-32  h-fit  bg-white shadow-md rounded-lg font-poppins">
           <div className="flex">
-            <span className="close" onClick={handleModalClose}>
-              
-            </span>
+            <span className="close" onClick={handleModalClose}> </span>
+     
             
             <div className="">
               {Array.from({ length: 12 }, (_, i) => i).map((hour) => (
                 <div key={hour}>
-                   {/* <span onClick={() => handleTimeClick(`${hour}:00`)}>
-                    {hour}
-                  </span>  */}
-                  <span 
+                   <span 
+                   className='tracking-wide text-base font-normal leading-loose pl-4 pb-10 pt-4 font-poppins'
+                   onClick={() => handleTimeClick(`${hour}:00`)}>
+                    {hour}:00
+                  </span> 
+                  {/* <span 
                   className='text-sm font-medium leading-loose p-6 pt-4'
                   onClick={() => handleTimeClick(`${hour}:30`)}>
                     {hour}:00
-                  </span>
+                  </span> */}
                   
                 </div>
               ))}
@@ -41,7 +42,7 @@ function Modal({ onTimeClick, showModal, handleModalClose }) {
             <div className='grid'>
               
               <button 
-              className=' absolute top-2 text-sm right-4 font-medium leading-loose p-4 w-8 h-8 bg-red-400 text-black rounded-lg flex items-center justify-center'
+              className=' z-30 absolute top-1 text-base  right-6 font-medium leading-loose p-4 w-9 h-8 bg-[#f64f59] text-black rounded-md flex items-center justify-center font-poppins'
                 onClick={ handlePeriod}>{isAm ? "AM" : "PM"}
                
               </button>

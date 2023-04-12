@@ -1,0 +1,26 @@
+.add-events-container{
+    width: 862px;
+    height: 784px;
+}
+
+.title-input{
+    width: 742px;
+}
+.location-input{
+    width: 742px;
+}
+.all-day{
+    width: 742px;
+}
+.start{
+    width: 742px;
+}
+.end{
+    width: 742px;
+}
+.repeat{
+    width: 742px;
+}
+.alert{
+    width: 742px;
+}

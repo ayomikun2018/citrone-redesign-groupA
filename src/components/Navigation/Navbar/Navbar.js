@@ -6,7 +6,7 @@ import Bell from "../../Pages/Dashboard/DashboardAssets/notification.svg"
 
 const Navbar = () => {
   return (
-    <div class=" fixed w-full h-24 bg-white shadow border border-#94a3b8-600 display: flex z-20">
+    <div class=" fixed w-full h-24 bg-[#f1f1f1] shadow border border-#94a3b8-600 display: flex z-20">
     <div className='' >
       <img src={CitroneLogo} alt="citrone_logo" className="w-52 h-20 ml-10 mt-2"/>
     </div>

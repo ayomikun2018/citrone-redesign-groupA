@@ -1,84 +1,103 @@
 import React, { useState } from 'react';
-import PrevIcons from "../../DashboardAssets/shape4.svg"
-import NextIcons from "../../DashboardAssets/shape3.svg"
+import moment from 'moment'
+import './CalenderModal.css'
+import PrevIcon from "../../DashboardAssets/shape4.svg"
+import NextIcon from "../../DashboardAssets/shape3.svg"
 
+function CalenderModal({eventDate}) {
+  const [showCalenderModal, setShowCalenderModal] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(moment());
 
-function EventCalender({ onTimeClick, handleDateModalClose }) {
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [currentMonth, setCurrentMonth] = useState(new Date());
-
-  
-
-  const handleDateClick = (day) => {
-    onTimeClick(day);
+  const handlePrevMonth = () => {
+    setSelectedDate(selectedDate.clone().subtract(1, 'month'));
   };
 
-  const handleMonthChange = (direction) => {
-    setCurrentMonth((prevMonth) => {
-      const newMonth = new Date(prevMonth);
-      if (direction === 'prev') {
-        newMonth.setMonth(newMonth.getMonth() - 1);
-      } else {
-        newMonth.setMonth(newMonth.getMonth() + 1);
-      }
-      return newMonth;
-    });
+  const handleNextMonth = () => {
+    setSelectedDate(selectedDate.clone().add(1, 'month'));
   };
 
-  const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const month = currentMonth.getMonth();
-  const year = currentMonth.getFullYear();
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const firstDayOfMonth = new Date(year, month, 1).getDay();
-  const lastDayOfMonth = new Date(year, month, daysInMonth).getDay();
+  const toggleModal = () => {
+    setShowCalenderModal(!showCalenderModal);
+  };
 
-  const days = [];
-  let day = 1;
-
-  // Add padding for days before the first day of the month
-  for (let i = 0; i < firstDayOfMonth; i++) {
-    days.push(<div key={`empty-${i}`} className="empty"></div>);
+  const handleEventDateClick = () => {
+    setShowCalenderModal(true)
   }
 
-  // Add days of the month
-  while (day <= daysInMonth) {
-    const isToday = day === new Date().getDate() && month === new Date().getMonth() && year === new Date().getFullYear();
-    const isSelected = day === selectedDate;
-    days.push(
-      <div key={day} className={`day${isToday ? ' today' : ''}${isSelected ? ' selected' : ''}`} onClick={() => handleDateClick(day)}>
-        {day}
+  const renderCalendar = () => {
+    const daysOfWeek = moment.weekdaysShort();
+    const firstDayOfMonth = selectedDate.clone().startOf('month');
+    const lastDayOfMonth = selectedDate.clone().endOf('month');
+    const daysInMonth = lastDayOfMonth.date();
+    const startingWeekday = firstDayOfMonth.weekday();
+    const weeksInMonth = Math.ceil((daysInMonth + startingWeekday) / 7);
+
+    const days = [];
+
+    for (let i = 0; i < weeksInMonth; i++) {
+      const week = [];
+
+      for (let j = 0; j < 7; j++) {
+        const day = i * 7 + j + 1 - startingWeekday;
+        const date = selectedDate.clone().date(day);
+
+        if (day > 0 && day <= daysInMonth) {
+          week.push(
+            <div
+              className={`day ${date.isSame(moment(), 'day') ? 'today' : ''}`}
+              key={day}
+              onClick={() => console.log(`Clicked on ${date.format('YYYY-MM-DD')}`)}
+            >
+              {day}
+            </div>
+          );
+        } else {
+          week.push(<div className="empty" key={`${i}-${j}`} />);
+        }
+      }
+
+      days.push(<div className="week" key={i}>{week}</div>);
+    }
+
+    return (
+      <div className="start-calendar-modal bg-white font-poppins rounded-xl">
+        <div className="flex space-x-20 items-center justify-center p-6 ">
+          <div className="flex whitespace-nowrap gap-3 text-lg font-medium font-poppins ">{selectedDate.format('MMMM YYYY')} <img src={NextIcon} alt='next' className='w-3 h-3 mt-2 ml-2"'/> </div>
+          <div className=' w-fit  cursor-pointer flex flex-wrap mt-3'>
+            <button onClick={handlePrevMonth}><img src={PrevIcon} alt='prev' className=' w-6 h-6 -mt-5'/></button>
+            <button onClick={handleNextMonth}><img src={NextIcon} alt='next' className=' w-6 h-6 -mt-6 ml-10'/></button>
+          </div>
+        </div>
+        {/* Days of the week */}
+        <div className=" start-calendar-days items-center justify-center grid grid-cols-7  font-poppins"
+        onClick={handleEventDateClick}>
+          {daysOfWeek.map((day) => (
+            <div 
+            className=" w-24 text-sm day-of-week flex text-gray-500" 
+            key={day}>{day}</div>
+          ))}
+          <div className=' grid grid-cols-8 gap-12'>   {/* Days in the month */}
+          {days}
+          </div>
+        </div>
       </div>
     );
-    day++;
-  }
-
-  // Add padding for days after the last day of the month
-  for (let i = lastDayOfMonth; i < 6; i++) {
-    days.push(<div key={`empty-${i}`} className="empty"></div>);
-  }
+  };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="calendar-nav">
-          <button onClick={() => handleMonthChange('prev')}><img src={PrevIcons} alt= 'prevIcon' className=" w-5 h-5 fill-red-500 mt-2 mr-6"/></button>
-          <button onClick={() => handleMonthChange('next')}><img src={NextIcons} alt='nextIcon' className="w-5 h-5 fill-red-500 mt-2"/></button>
-        </div>
-        <div className="event-editor">
-          <h2>{selectedDate ? `${year}-${month + 1 < 10 ? '0' + (month + 1) : month + 1}-${selectedDate < 10 ? '0' + selectedDate : selectedDate}` : 'None'}</h2>
-        </div>
-        <h1>{`${year}-${month + 1 < 10 ? '0' + (month + 1) : month + 1}`}</h1>
-        <div className="calendar">
-          <div className="calendar-header">
-            {daysOfWeek.map((day) => (
-              <div key={day}>{day}</div>
-            ))}
+    <div onClick={toggleModal} className=" grid">
+      <button className='whitespace-nowrap w-20 h-7 bg-zinc-300 text-sm font-md rounded-md p-2 flex items-center' 
+      >{eventDate ? eventDate : 'Jan 5, 2023'}</button>
+      {showCalenderModal && (
+        <div className="start-modal">
+          <div className="justify-between">
+            {renderCalendar()}
+            {/* <button onClick={toggleModal} >Close</button> */}
           </div>
-          <div className="calendar-days">{days}</div>
         </div>
-        
-      </header>
+      )}
     </div>
-  )
-  }
-export default EventCalender
+  );
+}
+
+export default CalenderModal;

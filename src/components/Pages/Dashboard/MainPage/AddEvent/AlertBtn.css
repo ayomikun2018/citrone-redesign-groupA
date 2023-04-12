@@ -1,0 +1,41 @@
+
+  
+  .alert-modal {
+    position: fixed;
+    top: 3vh;
+    left: 90%;
+    
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .alert-modal-content {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .alert-modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .alert-modal li {
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .alert-modal li:hover {
+  }
+  
+  .alert-modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  

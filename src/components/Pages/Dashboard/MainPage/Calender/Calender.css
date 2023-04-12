@@ -1,11 +1,14 @@
-.calendar {
+/* .calendar {
+    width: 417px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 20px;
   }
-  
+  .calender-width{
+    
+  }
   .header {
     display: flex;
     justify-content: space-between;
@@ -26,9 +29,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  }
+  } */
   
-  .event {
+  /* .event {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,4 +39,23 @@
     background-color: #f0f0f0;
     padding: 10px;
     margin: 10
+  } */
+
+  .calender{
+   
+  width: 417px;
+  /* min-height: auto; */
+
+  }
+
+  .live-session{
+    top: 22rem;
+  }
+
+  .peer-learning{
+    top: 27rem;
+  }
+
+  .add-event-div{
+    top: 32rem;
   }

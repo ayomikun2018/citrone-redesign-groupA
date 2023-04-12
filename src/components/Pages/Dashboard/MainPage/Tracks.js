@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import CommunityChat from './CommunityChat'
 import Data_ from "./TracksData"
 import Modal from './Modal'
 
@@ -14,16 +13,16 @@ const Tracks = () => {
     <React.Fragment>
         <div className='flex'>
             <div className='ml-64'>
-                <div className='flex space-x-66 gap-96'>
-                    <p className='mt-10 p-1 text-base font-medium'>Course You’re Taking</p>
-                    <Link to="/"><p className='mt-10 p-1 text-base font-semi-bold text-red-500' >View All <span>&#62;</span> </p></Link>
+                <div className='flex space-x-66 gap-96 mt-10'>
+                    <p className=' -ml-5 p-1 text-base font-medium'>Course You’re Taking</p>
+                    <Link to="/"><p className=' pb-3 text-sm font-semi-bold text-red-500' >View All <span>&#62;</span> </p></Link>
                 </div>
-                <div className="mt-4 flex ">
+                <div className=" -ml-4 mt-4 flex ">
                     {
                         Data_.map((value, index) => {
                             return (
                                 <div
-                                className='w-80 h-64 bg-white drop-shadow-md rounded-xl mr-6'
+                                className='w-80 h-64 bg-[#f1f1f1] drop-shadow-md rounded-xl mr-6'
                                 key={index}
                                 >
                                 <img src={value.img} alt='Course Image' className=""/>
@@ -41,13 +40,11 @@ const Tracks = () => {
                     }
                 </div>
                  {/* Pop-up area or modal side */}
-                 <p className=' mt-10 text-base font-medium'>Course Progress</p>
+                 <p className=' -ml-4 mt-10 text-base font-medium'>Course Progress</p>
                  <Modal /> 
             </div>
                    
-            <div>
-             <CommunityChat /> 
-            </div>
+            
         </div>
     </React.Fragment>
   )
