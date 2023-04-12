@@ -1,0 +1,33 @@
+.students{
+    border-top: 1px solid#F8727A ;
+    margin-top: 14px;
+    /* display: flex; */
+}
+.students div{
+  
+}
+.links{
+    display: flex;
+    flex-direction:row ;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #D1D1D1;
+    padding: 20px 40px;
+}
+.students section{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+      /* border-bottom: 1px solid #D1D1D1; */
+}
+
+.students div img{
+    height: 60px;
+    width: 60px;
+ }
+ .students h4{
+    color:#9A9A98;
+    /* margin-left: 1%; */
+
+ }
