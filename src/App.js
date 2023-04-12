@@ -10,7 +10,14 @@ import ResetPassword from "./components/Pages/Login/ResetPassword";
 import Courses from "./components/Pages/Courses/Courses";
 import Community from "./components/Pages/Community/Community";
 import Help from "./components/Pages/Help/Help";
-// import Assignments from "./components/Pages/Assignments/Assignments";
+
+import Assignments from "./components/Pages/Assignments/Assignments";
+import Settings from './components/Pages/Settings/Settings'
+import LightMode from './components/Pages/LightMode/LightMode'
+import Message from './components/Pages/Message/Message'
+import Logout from './components/Pages/Logout/Logout'
+//import AddEvents from "./components/Pages/Dashboard/MainPage/AddEvent/AddEvents";
+
 function App() {
   return (
   
@@ -42,7 +49,7 @@ function App() {
    <Route path= '/dashboard' element = {<Dashboard/>}/>
    <Route path= '/logout' element = {<Logout/>}/>
    <Route path= '/lightmode' element = {<LightMode/>}/>
-   <Route path= '/addevents' element = {<AddEvents/>}/>
+   {/* <Route path= '/addevents' element = {<AddEvents/>}/> */}
    <Route path= '/help' element = {<Help/>}/>
 
 

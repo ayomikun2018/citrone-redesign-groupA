@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-const Courses = () => {
-  return (
-    <div>Courses</div>
-  )
-}
-
-export default Courses
-=======
 import React from 'react'
 import Navbar from '../../Navigation/Navbar/Navbar'
 import Sidebar from '../../Navigation/Sidebar/Sidebar'
@@ -88,4 +77,3 @@ const Courses = () => {
 }
 
 export default Courses;
->>>>>>> 9c3081b9609364e8e5dba4c5b2e8f6b35978202c
