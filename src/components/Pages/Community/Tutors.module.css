@@ -1,0 +1,31 @@
+.tutors{
+    border-top: 1px solid#F8727A ;
+    /* border-bottom: 1px solid #F8727A ; */
+    margin-top: 10px;
+    /* padding: 0px 40px; */
+}
+.tutors div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    
+    padding: 20px 40px;
+   
+}
+.tutors div img{
+height: 60px;
+width: 60px;
+}
+.one{
+    border-bottom: 1px solid #D1D1D1;
+}
+.two{
+    border-bottom: 1px solid #D1D1D1;
+}
+.three{
+
+}
+.tutors div p{
+/* color: #1A1A1A; */
+}
