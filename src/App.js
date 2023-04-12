@@ -10,6 +10,7 @@ import Assignments from "./components/Pages/Assignments/Assignments"
 import Message from "./components/Pages/Message/Message" 
 import Settings from "./components/Pages/Settings/Settings"
 import Community from './components/Pages/Community/Community'
+import Help from './components/Pages/Help/Help'
 import Logout from "./components/Pages/Logout/Logout"
 import LightMode from './components/Pages/LightMode/LightMode'
 import AddEvents from './components/Pages/Dashboard/MainPage/AddEvent/AddEvents'
@@ -36,6 +37,8 @@ function App() {
    <Route path= '/logout' element = {<Logout/>}/>
    <Route path= '/lightmode' element = {<LightMode/>}/>
    <Route path= '/addevents' element = {<AddEvents/>}/>
+   <Route path= '/help' element = {<Help/>}/>
+
 
    </Routes>
   );

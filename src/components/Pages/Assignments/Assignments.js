@@ -1,30 +1,8 @@
-import React, { useState } from 'react';
-import Modal from './Modal';
+import React from 'react'
 
-function EventPlanner() {
-  const [eventTime, setEventTime] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-
-  const handleEventTimeClick = () => {
-    setShowModal(true);
-  };
-
-  const handleModalClose = () => {
-    setShowModal(false);
-  };
-
-  const handleTimeClick = (time) => {
-    setEventTime(time);
-    setShowModal(false);
-  };
-
+ const Assignments = () => {
   return (
-    <div>
-      <p>Event time: {eventTime ? eventTime : 'Not set'}</p>
-      <button onClick={handleEventTimeClick}>Set event time</button>
-      {showModal && <Modal onClose={handleModalClose} onTimeClick={handleTimeClick} />}
-    </div>
-  );
+    <div>Assignments</div>
+  )
 }
-
-export default EventPlanner;
+export default Assignments
