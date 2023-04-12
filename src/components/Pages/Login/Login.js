@@ -9,6 +9,7 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { useForm } from 'react-hook-form'
 import { useState } from "react"
 import Success from './Modals/Success'
+import Togglepassword from './TogglePasswordIcon'
 
 
 
@@ -24,6 +25,20 @@ const LogIn = () => {
   //Hooks for form validation
   const { register, formState: { errors }, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data)
+
+  //show/hide passwords
+
+  const [PasswordInputType, ToggleIcon]=  Togglepassword();
+  // let eyeIcon = document.getElementById("eyeicon");
+  // let password = document.getElementById("password");
+
+  // const Showpassword = function () {
+  //   if (password.type === "password"){
+  //       password.type = "text"; 
+  //   } else  {
+  //     password.type = "password";
+  //   }  
+  // }
 
   return (
 
@@ -49,16 +64,17 @@ const LogIn = () => {
               <div class="mb-1 relative">
                 <label for='Password' class="text-sm font-medium">Password</label>
                 <br></br>
-                <input type='password' class="p-2 w-full h-10 text-sm pl-3 text-justify outline rounded-md outline-1 outline-gray-300
-                focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59]" placeholder="*******" {...register("password", {
+                <input type={PasswordInputType} class="p-2 w-full h-10 text-sm pl-3 text-justify outline rounded-md outline-1 outline-gray-300
+                focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59]" placeholder="*******" id="password" {...register("password", {
                   required: true
                 })} />
                 <div class='text-red-400 text-xs'>{errors.password?.type === "required" && "password is required"}
                 </div>
-                <FontAwesomeIcon icon={faEyeSlash} class="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9" />
-                <FontAwesomeIcon icon={faEye} class="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9 hidden" />
+                <span class="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9">{ToggleIcon}</span>
+                {/* <FontAwesomeIcon icon={ visible ? "faEyeSlash" : "faEye"} class="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9"/> */}
+                {/* <FontAwesomeIcon icon={faEye} class="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9 hidden" /> */}
               </div>
-              <div class="flex tablet:space-x-40 xs:space-x-12 lg:space-x-3">
+              <div class="flex space-x-40">
                 <div class="flex flex-row justify-center items-center cursor-pointer relative">
                   <input class="peer w-4 h-4 shrink-0 rounded-sm appearance-none border-2 rounded-2
                   focus:outline-none focus:ring-[#f64F59] 
@@ -76,10 +92,10 @@ const LogIn = () => {
               <div class="relative">
                 <button class="bg-transparent outline mb-8 w-full h-10 rounded-md text-black outline-1 outline-gray-300 text-sm py-2">
                   Sign in with Google</button>
-                <img src={GoogleIcon} alt="google Icon" class="w-4 h-4 absolute top-3 tablet:left-20 xs:left-10 md:left-5 lg:left-5 lg:max-xs:hidden" />
+                <img src={GoogleIcon} alt="google Icon" class="w-4 h-4 absolute top-3 left-24 " />
               </div>
             </form>
-            <p class="text-center sm:text-sm md:text-xs">Don’t have an account? <a class="text-[#F64F59]" href='/signup'>Sign Up</a></p>
+            <p class="text-center text-sm ">Don’t have an account? <a class="text-[#F64F59]" href='/signup'>Sign Up</a></p>
           </div>
         </div>
       </div>
