@@ -7,7 +7,7 @@ import Search from './communityAssets/search.svg';
 import Toggle from './communityAssets/toggle.svg';
 import Tutors from "./Tutors";
 import Students from "./Students";
-export default function Messages() {
+export default function Community() {
   return (
     <Fragment >
       <Navbar/>
