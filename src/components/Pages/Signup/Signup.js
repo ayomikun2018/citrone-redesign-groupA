@@ -22,7 +22,7 @@ const SignUp = () => {
 
     return (
         <div >
-            <img src={Logo} class="pl-10 pt-10 " alt="Citrone Logo"></img>
+            <img src={Logo} class="pl-10 pt-10  w-52 h-32 " alt="Citrone Logo"></img>
             <div class="h-full flex items-center justify-center ">
                 <div class="h-full pt-20">
 

@@ -43,7 +43,7 @@ const LogIn = () => {
   return (
 
     <div class="font-poppins">
-      <img src={Logo} class="pl-10 pt-10" alt="Citrone Logo"></img>
+      <img src={Logo} class="pl-10 pt-10 w-52 h-32" alt="Citrone Logo"></img>
       <div class="h-screen flex items-center justify-center">
         <div class="h-full pt-24">
           <h1 class="font-bold text-3xl items-center text-center text-stone-800 pb-8">Log In</h1>
