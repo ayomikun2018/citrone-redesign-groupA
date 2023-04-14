@@ -20,7 +20,7 @@ const Sidebar = () => {
             topSidebar.map((item, index) => {
             return (
                 <div 
-                    className='sidebar-row show'
+                    className='flex items-center gap-3 hover:bg-red-200 hover:border-r-8 border-red-500 hover:rounded-l-lg sidebar-row sidebar-row show'
                     id={window.location.pathname === item.link ? "active" : ""}
                     key={index}
                     onClick={() => {window.location.pathname = item.link}}
@@ -39,7 +39,7 @@ const Sidebar = () => {
             bottomSidebar.map((element, value) => {
             return (
                 <div 
-                    className='sidebar-row'
+                className='flex items-center gap-3 hover:bg-red-200 hover:border-r-8 border-red-500 hover:rounded-l-lg sidebar-row sidebar-row show'
                     id={window.location.pathname === element.link ? "active" : ""}
                     key={value}
                     onClick={() => {window.location.pathname = element.link}}

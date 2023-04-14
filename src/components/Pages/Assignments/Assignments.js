@@ -4,6 +4,7 @@ import { BiDotsVerticalRounded } from 'react-icons/bi';
 import { FiSearch } from 'react-icons/fi';
 import classes from './assignments.module.css';
 import imageA from './assignmentsAssets/Rectangle 29880.svg'
+
 export default function Assignments() {
   return (
     <div className={classes.assignments}>
@@ -117,3 +118,4 @@ export default function Assignments() {
     </div>
   )
 }
+
