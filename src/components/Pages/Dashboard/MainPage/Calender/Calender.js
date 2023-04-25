@@ -4,7 +4,7 @@ import NextIcons from "../../DashboardAssets/shape3.svg"
 import './Calender.css'
 import { Link } from 'react-router-dom'
 //import { GlobalContext } from 
-import eventData from './eventData';
+import eventData from './eventData'
 import AddEvents from '../AddEvent/AddEvents'
 
 
@@ -159,17 +159,18 @@ const Calendar = () => {
   export const AddEventButton = (props) => {
     
       return (
-        <div className='add-event-div flex items-center left-16 fixed p-4'>
+        <div className=''> 
+        
           {/* <Link to= "/dashboard"> */}
-            <button  onClick={props.showAddEventModal} 
-            className="add-event-btn w-80 h-16 bg-[#f64f59] text-white pl-10 pr-10 text-sm text-center hover:bg-red-500 rounded-xl align-center" 
+            <button  
+              onClick={props.showAddEventModal} 
+              className="add-event-btn h-16  flex items-center bg-[#f64f59] text-white pl-10  text-sm text-center hover:bg-red-500 rounded-xl align-center"
+              style={{width: "310px", height: "60px", position: "absolute",  top: "247%", left: "73%"}} 
             > Add Event
             </button>
-          
         </div>
        
       )
     }
-    
     
 export default Calendar;

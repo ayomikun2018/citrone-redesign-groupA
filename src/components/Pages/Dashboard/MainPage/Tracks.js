@@ -15,17 +15,16 @@ const Tracks = () => {
             <div className='ml-64'>
                 <div className='flex space-x-66 gap-96 mt-10'>
                     <p className=' -ml-5 p-1 text-base font-medium'>Course You’re Taking</p>
-                    <Link to="/"><p className=' pb-3 text-sm font-semi-bold text-red-500' >View All <span>&#62;</span> </p></Link>
+                    <Link to="/"><p className=' pb-3 text-sm font-semi-bold text-red-500 ml-7' >View All <span>&#62;</span> </p></Link>
                 </div>
-                <div className=" -ml-4 mt-4 flex ">
+                <div className=" -ml-4 mt-4 flex space-x-2 ">
                     {
                         Data_.map((value, index) => {
                             return (
-                                <div
-                                className='w-80 h-64 bg-[#f1f1f1] drop-shadow-md rounded-xl mr-6'
+                                <div className='w-80 h-64 bg-[#ffffff] drop-shadow-md rounded-xl mr-6'
                                 key={index}
                                 >
-                                <img src={value.img} alt='Course Image' className=""/>
+                                <img src={value.img} alt='Course Image' className=" w-fit h-fit"/>
                                 
                                 <div className='flex space-x-30 gap-14' >
                                     <div className='' >
