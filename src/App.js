@@ -12,15 +12,18 @@ import Community from "./components/Pages/Community/Community";
 import Help from "./components/Pages/Help/Help";
 
 import Assignments from "./components/Pages/Assignments/Assignments";
+import TotalAssignment from "./components/Pages/Assignments/TotalAssignment";
+import Assignment from "./components/Pages/Assignments/Assignment";
+import AssignmentGrade from "./components/Pages/Assignments/AssignmentGrade";
+import TaskProgress from "./components/Pages/Assignments/TaskProgress";
 import Settings from './components/Pages/Settings/Settings'
 import LightMode from './components/Pages/LightMode/LightMode'
 import Message from './components/Pages/Message/Message'
 import Logout from './components/Pages/Logout/Logout'
-//import AddEvents from "./components/Pages/Dashboard/MainPage/AddEvent/AddEvents";
 
 function App() {
   return (
-  
+
     <Routes>
  
     {/* Pages */}
@@ -33,11 +36,10 @@ function App() {
     <Route exact path= '/courses' element= {<Courses />} />
     <Route exact path= '/community' element = {<Community/>}/>
    <Route exact path= '/help' element = {<Help/>}/>
-
-
-   {/* <Route exact path= '/assignments' element = {<Assignments/>}/> */}
-
-
+   <Route exact path= '/totalassignment' element = {<TotalAssignment/>}/>
+   <Route exact path= '/taskprogress' element = {<TaskProgress/>}/>
+   <Route exact path= '/assignment' element = {<Assignment/>}/>
+   <Route exact path= '/assignmentgrade' element = {<AssignmentGrade/>}/>
 
 
     {/* Sidebar pages */}
@@ -49,7 +51,6 @@ function App() {
    <Route path= '/dashboard' element = {<Dashboard/>}/>
    <Route path= '/logout' element = {<Logout/>}/>
    <Route path= '/lightmode' element = {<LightMode/>}/>
-   {/* <Route path= '/addevents' element = {<AddEvents/>}/> */}
    <Route path= '/help' element = {<Help/>}/>
 
 
