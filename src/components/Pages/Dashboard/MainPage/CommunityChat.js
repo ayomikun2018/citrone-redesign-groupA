@@ -18,7 +18,7 @@ const CommunityChat = () => {
   return (
     <React.Fragment>
       {/* has some css in MainPage.css */}
-      <div className=' community-chat1 list-item min-w-max border-l bg-transparent border-slate-300 font-poppins  '>
+      <div className=' community-chat1 list-item min-w-max border-l bg-transparent border-slate-400 font-poppins'>
         <div className=' announce-1 z-10 relative flex -top-54 -right-12 bg-[f1f1f1] shadow-md p-1 rounded-xl'>
           <img src={Ellipse} alt={Ellipse} className='w-16 h-16 mt-0 p-1'/>
           <p className='text-sm p-1 mt-4 ml-3 italic whitespace-nowrap font-poppins'>Announce something to your class</p>
@@ -44,7 +44,7 @@ const CommunityChat = () => {
                     <p className='text-sm font-normal whitespace-nowrap leading-1 -mt-1 p-1'>{element.date}</p>
                   </div>
                   <div className='w-96  ml-0 absolute'>
-                    <p className='text-xs p-1 mt-14 ml-3 font-semi-bold leading-4'>{element.Comment}</p>
+                    <p className='text-xs p-1 mt-14 ml-3 font-semi-bold leading-4 tracking-wide'>{element.Comment}</p>
                     <div className='announce-line border-t-2 border-slate-300 mt-0 -ml-1'></div>
 
                   </div>
@@ -60,7 +60,7 @@ const CommunityChat = () => {
                       placeholder="Write a reply here..." 
                      
                   />
-                    <button><img src={SendVector} alt={SendVector} className='absolute z-20 top-1 right-2' onClick={() => setUser(userMessage) }/> </button>
+                    <button><img src={SendVector} alt={SendVector} className='absolute w-4 h-4 z-20 top-1 right-2' onClick={() => setUser(userMessage) }/> </button>
                     
                 </div>
               </div>

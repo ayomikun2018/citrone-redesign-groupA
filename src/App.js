@@ -53,7 +53,6 @@ function App() {
    <Route path= '/lightmode' element = {<LightMode/>}/>
    <Route path= '/help' element = {<Help/>}/>
 
-
    </Routes>
   );
 }

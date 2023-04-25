@@ -5,10 +5,13 @@ module.exports = {
    extend:{
       color: {
         'citrone-red' : '#f64f59',
+        'citrone-red2' : '#F8727A',
         'ae-bg' : '#FBFBFB',
         'chat-color' : '#f1f1f1' ,
         'event-color' : '#fff1f1',
-        'event-row' : '#F6F6F6'
+        'event-row' : '#F6F6F6',
+        'logout-text' : '#A5A5A5;'
+
       
       },
       fontFamily: {
