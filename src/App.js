@@ -10,12 +10,24 @@ import ResetPassword from "./components/Pages/Login/ResetPassword";
 import Courses from "./components/Pages/Courses/Courses";
 import Community from "./components/Pages/Community/Community";
 import Help from "./components/Pages/Help/Help";
-// import Assignments from "./components/Pages/Assignments/Assignments";
+
+import Assignments from "./components/Pages/Assignments/Assignments";
+import TotalAssignment from "./components/Pages/Assignments/TotalAssignment";
+import Assignment from "./components/Pages/Assignments/Assignment";
+import AssignmentGrade from "./components/Pages/Assignments/AssignmentGrade";
+import TaskProgress from "./components/Pages/Assignments/TaskProgress";
+import Settings from './components/Pages/Settings/Settings'
+import LightMode from './components/Pages/LightMode/LightMode'
+import Message from './components/Pages/Message/Message'
+import Logout from './components/Pages/Logout/Logout'
+
 function App() {
   return (
-  
+
     <Routes>
-    <Route exact path= '/' element = {<LandingPage/>}/>
+ 
+    {/* Pages */}
+   <Route exact path= '/' element = {<LandingPage/>}/>
     <Route exact path= '/signup' element = {<Signup/>}/>
     <Route exact path= '/login' element = {<Login/>}/>
     <Route exact path= '/dashboard' element = {<Dashboard/>}/>
@@ -24,9 +36,22 @@ function App() {
     <Route exact path= '/courses' element= {<Courses />} />
     <Route exact path= '/community' element = {<Community/>}/>
    <Route exact path= '/help' element = {<Help/>}/>
+   <Route exact path= '/totalassignment' element = {<TotalAssignment/>}/>
+   <Route exact path= '/taskprogress' element = {<TaskProgress/>}/>
+   <Route exact path= '/assignment' element = {<Assignment/>}/>
+   <Route exact path= '/assignmentgrade' element = {<AssignmentGrade/>}/>
 
 
-   {/* <Route exact path= '/assignments' element = {<Assignments/>}/> */}
+    {/* Sidebar pages */}
+   <Route path= '/courses' element = {<Courses/>}/>
+   <Route path= '/assignments' element = {<Assignments/>}/>
+   <Route path= '/settings' element = {<Settings/>}/>
+   <Route path= '/message' element = {<Message/>}/>
+   <Route path= '/community' element = {<Community/>}/>
+   <Route path= '/dashboard' element = {<Dashboard/>}/>
+   <Route path= '/logout' element = {<Logout/>}/>
+   <Route path= '/lightmode' element = {<LightMode/>}/>
+   <Route path= '/help' element = {<Help/>}/>
 
 
    </Routes>
