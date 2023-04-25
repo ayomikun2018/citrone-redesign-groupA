@@ -60,7 +60,7 @@ return (
                         <div className="NameclassNamemb-3 font-poppins">
                             <label htmlFor='email' className="text-sm font-normal">Email</label>
                             <br></br>
-                            <input type='text' id='emailaddress'  value={email} onChange={change}  className="p-2 w-full h-10 text-sm pl-3 outline rounded-md 
+                            <input type='text' id='emailaddress' className="p-2 w-full h-10 text-sm pl-3 outline rounded-md 
                                 focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59]
                                 outline-1 outline-gray-300" placeholder="Email@email.com" {...register("email", {
                                 required: true, pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i,
@@ -73,12 +73,12 @@ return (
                         <div className="relative font-poppins  mb-3 ">
                             <label htmlFor='password' className="text-sm">Password</label>
                             <br></br>
-                            <input type={(isPasswordShown) ? "text" : "password"} id='passwordinput' value={password} onChange={(e) => setPassword(e.target.value)} className="p-2 w-full text-sm pl-3 h-10 outline rounded-md outline-1
+                            <input type={(isPasswordShown) ? "text" : "password"} id='passwordinput' className="p-2 w-full text-sm pl-3 h-10 outline rounded-md outline-1
                                  focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59]
                                  outline-gray-300" placeholder="At least 8 characters" {...register("password", {
                                 required: true, minLength: 8, maxLength: 12,
                             })} />
-                          <div class="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9 " >
+                          <div className="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9 " >
                                 {
                                     (isPasswordShown === false) ? <FontAwesomeIcon icon={faEyeSlash} onClick={togglePasswordVisiblility} /> :
                                         <FontAwesomeIcon icon={faEye} onClick={togglePasswordVisiblility} />
@@ -92,14 +92,14 @@ return (
                         <div className="relative font-poppins">
                             <label htmlFor='password' className="text-sm font-normal">Confirm Password</label>
                             <br></br>
-                            <input type={(isPasswordShown) ? "text" : "password"} id='password2' value={confirmpassword} onChange={(e) => setConfirmPassword(e.target.value)} className="p-2 w-full h-10 text-sm pl-3 outline rounded-md 
+                            <input type={(isPasswordShown) ? "text" : "password"} id='password2' className="p-2 w-full h-10 text-sm pl-3 outline rounded-md 
                                  focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59] outline-1 outline-gray-300" placeholder="At least 8 characters" {...register("cpassword", {
                                 required: true, validate: (val) => {
                                     const { password } = getValues();
                                     return password === val
                                 }
                             })} />
-                            <div class="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9 " >
+                            <div className="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9 " >
                                 {
                                     (isPasswordShown === false) ? <FontAwesomeIcon icon={faEyeSlash} onClick={togglePasswordVisiblility} /> :
                                         <FontAwesomeIcon icon={faEye} onClick={togglePasswordVisiblility} />
