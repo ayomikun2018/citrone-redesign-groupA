@@ -39,7 +39,7 @@ const TopData_ = [
         id:5,
         icon: < IoIcons.IoSettingsOutline />,
         title: 'Settings',
-        link: '/setting'
+        link: '/settings'
     },
     {
         id:6,

@@ -69,11 +69,11 @@ function CalenderModal({eventDate}) {
           </div>
         </div>
         {/* Days of the week */}
-        <div className=" start-calendar-days items-center justify-center grid grid-cols-7  font-poppins"
+        <div className=" start-calendar-days items-center justify-center grid grid-cols-7 font-poppins"
         onClick={handleEventDateClick}>
           {daysOfWeek.map((day) => (
             <div 
-            className=" w-24 text-sm day-of-week flex text-gray-500" 
+            className=" w-28 text-sm day-of-week flex justify-center text-gray-500" 
             key={day}>{day}</div>
           ))}
           <div className=' grid grid-cols-8 gap-12'>   {/* Days in the month */}
