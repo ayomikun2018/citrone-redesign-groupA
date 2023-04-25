@@ -1,3 +1,322 @@
 .assignments{
+    padding-left:17.3% ;
+    padding-top: 5.6%;
+    display: flex;
+    flex-direction: column;
+}
+.breadcrumbs{
+    font-size: 14px;
+    height: 67px;
+    align-content: center;
+    align-items: center;
+    padding: 40px 40px 0px 40px;
+}
+.spanB{
+    color:#F64F59;
+    font-size: 14px;
+}
+.sections{
+    display: flex;
+    flex-direction: row;;
+}
+.firstHalf{
+    padding: 0px 40px;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    gap: 75px;
+    padding: 33px 0px 60px 0px;
+    color: #FBFBFB;
+}
+.cardA{
+    background: linear-gradient(136.96deg, #C53F47 20.06%, #FFAFA3 96.36%);
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    border: 1px solid #D2D2D2;
+    border-radius: 10px;
+    height: 200px;
+    width: 325px;
+    padding: 30px;
+}
+.cardA div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.cardA div p{
+    font-weight: 500;
+    font-size: 44px;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    text-align: center;
+}
+.cardA div h1{
+    height: 66px;
+    width: 175px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.cardA div span{
+    width: 2px;
+    height: 16px;
+}
+.cardA p{
+    font-size: 14px;
+  
+}
+.assign{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.heading{
+    display: flex;
+    flex-direction: row;
+   
+    width: 725px;
+    height: 60px;
     
+    padding: 16px;
+    background: #FBFBFB;
+    gap: 200px;
+    border: 1px solid #D2D2D2;
+    border-radius: 10px;
+    align-content: center;
+}
+.heading div{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: space-evenly;
+    /* flex-direction: row; */
+}
+.totalAssign{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* border: 1px solid red; */
+}
+.assignCard{
+    display: flex;
+    flex-direction: row;
+    width: 725px;
+  gap: 40px;
+    padding: 25px 12px;
+    height: 90px;
+    /* width: 725px; */
+    background: #FBFBFB;
+border: 0.2px solid #D2D2D2;
+box-shadow: 0px 2px 2px rgba(175, 177, 182, 0.2);
+border-radius: 10px;
+align-content: center;
+
+
+}
+.assignDetails{
+    display: flex;
+    flex-direction: row; 
+    /* border: 1px solid red; */
+    width: 265px;
+}
+.assignCard img{
+    width: 40px;
+height: 40px;
+
+
+}
+.info{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    gap: 100px;
+    /* width: 265px; */
+    /* border: 1px solid red; */
+    /* margin-left: 90px; */
+}
+.info div{
+    display: flex;
+    flex-direction: row; 
+    gap: 75px;
+    justify-content: space-evenly;
+}
+.titles{
+    display: flex;
+    flex-direction: column; 
+    /* border: 1px solid red; */
+    padding-left: 10px;
+}
+.titles h3{
+    font-weight: 500;
+font-size: 16px;
+}
+.titles p{
+    font-weight: 400;
+    font-size: 14px;
+}
+.info p{
+    font-weight: 500;
+font-size: 16px;
+}
+.info h4{
+    font-weight: 400;
+font-size: 14px;
+}
+.pending{
+    width: 81px;
+height: 32px;
+background: #E8E8E8;
+color: #BBBBBB;
+text-align: center;
+font-weight: 400;
+font-size: 12px;
+/* Light Grey/Light Grey 4 */
+
+border: 1px solid #D2D2D2;
+border-radius: 15px;
+}
+.progress{
+background: #FA959B;
+color: white;
+text-align: center;
+font-weight: 400;
+font-size: 12px;
+width: 81px;
+height: 32px;
+border-radius: 15px;
+}
+.completed{
+    width: 81px;
+    height: 32px;
+    background: #F64F59;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    /* Light Grey/Light Grey 4 */
+    
+    /* border: 1px solid #D2D2D2; */
+    border-radius: 15px;
+}
+.secondHalf{
+    /* border: 1px solid red; */
+    width: 324px;
+    padding-top: 24px;
+    /* gap: 150px; */
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #A3A3A3;
+    /* border: 1px solid rgb(101, 149, 101); */
+    height: 40px;
+    /* width: 100%; */
+    border-radius: 10px;
+    align-items: center;
+    /* position: relative; */
+    outline: none;
+    background-color: #FBFBFB;
+}
+.search input[type='text']{
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    background-color: #FBFBFB;
+}
+.searchIcon {
+    height: 20px;
+    width: 20px;
+    color: #BBBBBB;
+    /* border: 1px solid red; */
+    /* padding: 5px; */
+    /* position: absolute; */
+}
+.cardss{
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+}
+.graded{
+    height: 240px;
+    background: #FBFBFB;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    margin-top: 10px;
+
+border: 1px solid #D2D2D2;
+border-radius: 10px;
+}
+.graded h2{
+    font-weight: 500;
+font-size: 18px;
+color:#1A1A1A;
+}
+.gradeDetails{
+    display: flex;
+    flex-direction: row;
+    /* align-items: space-evenly; */
+    align-items: center;
+    gap: 15px;
+    
+}
+/* .gradeDetails div{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+} */
+.gradeDetails h3{
+    font-weight: 400;
+font-size: 16px;
+white-space: nowrap;
+color:#242424;
+/* overflow: wrap; */
+}
+.gradeDetails h4{
+    font-weight: 400;
+font-size: 12px;
+white-space: nowrap;
+}
+.viewComment{
+color:#F64F59
+}
+.noComment{
+color: #757575;
+}
+.retracted{
+    /* width: 324px; */
+    height: 220px;
+    padding: 15px 11px;
+    background: #FBFBFB;
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+    border: 1px solid #D2D2D2;
+    border-radius: 10px;
+}
+.retracted h2{
+    font-weight: 500;
+font-size: 18px;
+
+}
+.retracted div{
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap:63px;
+    
+font-weight: 400;
+font-size: 16px;
+}
+.retracted p{
+    font-weight: 400;
+font-size: 14px;
 }
