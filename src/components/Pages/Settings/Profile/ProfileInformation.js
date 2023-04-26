@@ -31,7 +31,7 @@ const ProfileInformation = () => {
             onSubmit={handleSubmit}
             className=' ' style={{ width: "90%", height: "150%"}}
          >
-            <div className='flex flex-wrap -mx-3 mt-8 mb-6 -space-x-20 font-poppins'>
+            <div className='flex flex-wrap -mx-3 mt-8 mb-6 -space-x-32 font-poppins' style={{ marginRight: "calc(-8rem * var(--tw-space-x-reverse))",}}>
                 <div className='w-full md:w-1/2 px-3 mb-6 md:mb-0'>
                      <label htmlFor="firstName" 
                      className='block  tracking-wide text-base font-medium mb-2" for="grid-first-name text-black' >
