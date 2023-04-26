@@ -18,8 +18,8 @@ const Message = () => (
   <div className="relative font-poppins flex flex-col w-full">
     <Navbar />
     <Sidebar />
-    <div className="ml-72 my-32"><Link to="/dashboard"><span> Dashboard</span> &gt; </Link><Link to="/message"><span className="text-[#F64F59]">Message </span></Link></div>
-    <div className="h-sceen w-full absolute my-40 ml-72">
+    <div className="ml-80 my-32"><Link to="/dashboard"><span> Dashboard</span> &gt; </Link><Link to="/message"><span className="text-[#F64F59]">Message </span></Link></div>
+    <div className="h-sceen absolute my-40 ml-80">
       <div className="py-5">
         <div className="flex flex-row">
           <img src={Ellipse}></img>
