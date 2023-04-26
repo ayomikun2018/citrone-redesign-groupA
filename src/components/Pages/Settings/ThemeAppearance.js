@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ThemeCheckbox from './ThemeCheckbox'
 // import './AccountLinks.js'
 
-const CheckBoxForm = () => {
+const ThemeCheckBoxForm = () => {
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   const handleFormSubmit = (event) => {
@@ -33,5 +33,5 @@ const CheckBoxForm = () => {
   );
 };
 
-export default CheckBoxForm;
+export default ThemeCheckBoxForm;
 

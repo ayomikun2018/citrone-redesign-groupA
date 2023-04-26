@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const Checkbox = ({ name, options, selectedOptions, onChange }) => {
+const ThemeCheckbox = ({ name, options, selectedOptions, onChange }) => {
 
   const handleCheckboxChange = (event) => {
     const option = event.target.value;
@@ -33,4 +33,4 @@ const Checkbox = ({ name, options, selectedOptions, onChange }) => {
   );
 };
 
-export default Checkbox;
+export default ThemeCheckbox;

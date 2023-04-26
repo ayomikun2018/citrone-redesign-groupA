@@ -6,7 +6,7 @@ import '../../Navigation/Sidebar/Sidebar.css'
 import NextIconBlk from "../Dashboard/DashboardAssets/next-blk.svg"
 // import ContactPage from './ContactPage';
 import  AccountSettingPage from './AccountSettingPage'
-import ThemeAppearance from './ThemeAppearance'
+import ThemeCheckBoxForm from './ThemeAppearance'
 import Privacy from './Privacy'
 import Profile from './Profile/Profile';
 
@@ -23,11 +23,11 @@ const Settings = ({setSelectedFile}) => {
     const anchors = document.querySelectorAll("a");
     anchors.forEach((a) => {
       if (a.innerHTML === option) {
-        a.style.color = "red";
+        a.style.color = "#f64f59";
         a.style.textDecoration = "underline";
-        a.style.textDecorationColor = "red";
+        a.style.textDecorationColor = "#f64f59";
         a.style.textDecorationThickness = "4px";
-        a.style.lineHeight = "2em";
+        a.style.lineHeight = "2rem";
         a.style.paddingBottom = "10px";
 
       } else {
@@ -62,9 +62,13 @@ const Settings = ({setSelectedFile}) => {
       case "My Profile":
         return <Profile />;
       case "Theme & Appearance":
-        return <ThemeAppearance />;
+        return <ThemeCheckBoxForm />;
       case "Account Setting":
-        return <AccountSettingPage />;
+        return (
+        <span style={{ color: "[#f64f59]"}}>
+        <AccountSettingPage />
+        </span>
+        );
       case "Privacy":
         return <Privacy />;
       default:
