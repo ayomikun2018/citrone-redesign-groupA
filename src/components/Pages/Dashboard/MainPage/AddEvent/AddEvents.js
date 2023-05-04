@@ -13,22 +13,29 @@ const AddEvents = ( props ) => {
         {title: "", location: ""}
     )
 
-    console.log(formData)
-// form input starts here
-    const handleChange = (event) => {
-        setFormData(prevFormData => {
-            return {
-                ...prevFormData,
-                [event.target.value] : event.target.value
-            }
-        })
+//     console.log(formData)
+// // form input starts here
+//     const handleChange = (event) => {
+//         setFormData(prevFormData => {
+//             return {
+//                 ...prevFormData,
+//                 [event.target.value] : event.target.value
+//             }
+//         })
         
-    }
+//     }
+
+
+    console.log(formData)
+    const handleChange = (event) => {
+        const {name, value } = event.target;
+        setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    };
+
 
     const handleSubmit = (e) => {
     e.preventDefault()
     console.log(e);
-  
 }
 
     // Toggle Button
@@ -97,6 +104,8 @@ const AddEvents = ( props ) => {
 
                 <div className='grid items-center place-items-center'>
                     <input 
+                        id= "title"
+                        type='text'
                         onChange= {handleChange} 
                         value={formData.title} 
                         name="title"
@@ -105,6 +114,8 @@ const AddEvents = ( props ) => {
                     />
 
                     <input 
+                        id= "title"
+                        type='text'
                         onChange={handleChange} 
                         value={formData.location}
                         name="location" 

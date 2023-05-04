@@ -27,8 +27,8 @@ const AccountSettingPage = () => {
 
   return (
         <React.Fragment >
-            <div className=' absolute left-10 -top-6' style={{ width: '100%', height: '180%'}}>
-                <div className=' absolute top-48 w-3/4 h-44 ' style={{left: '5%', top: "4%" }}>
+            <div className=' absolute left-10 -top-6 cursor-pointer' style={{ width: '100%', height: '180%'}}>
+                <div className=' absolute top-48 w-3/4 h-44 cursor-pointer' style={{left: '5%', top: "4%" }}>
                     <p className=' text-2xl font-medium font-poppins' style={{ lineHeight: '52px'}}>Contact</p>
                     <span className='  text-base mt-3 text-black whitespace-nowrap' >Here you can change your email, edit your password and update your phone number </span>
                 </div>  
@@ -48,7 +48,7 @@ const AccountSettingPage = () => {
                                 name='email'
                                 onChange={handleChange} 
                                 // value= {}
-                                className=' absolute -left-64 top-12 w-96 h-12 text-xl font-semibold font-poppins placeholder-black focus:outline-none' 
+                                className=' absolute -left-64 top-12 w-96 h-12 text-xl font-semibold font-poppins cursor-pointer placeholder-black focus:outline-none' 
                             />
                             <span className='absolute top-28 -left-64 text-sm text-[#A5A5A5] font-poppins'>This email is linked to your account.</span>
                         </div>

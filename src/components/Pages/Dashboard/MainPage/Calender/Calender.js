@@ -66,7 +66,7 @@ const Calendar = () => {
 
   return (
     <React.Fragment>
-    <div className=" bg-[#ffffff] left-12 top-8 drop-shadow-md relative rounded-xl" style={{width: "27rem", height: "40rem"}}>
+    <div className=" bg-[#fbfbfb] left-12 top-8 drop-shadow-md relative rounded-xl" style={{width: "26rem", height: "40rem"}}>
       <div className="flex mt-4 place-content-center justify-between">
 
         {/*month-year function  */}
@@ -115,12 +115,12 @@ const Calendar = () => {
             
           </div>
 
-          <div className='grid bg-[#F6F6F6] w-9/12 h-16 absolute gap-2 left-20 border-l-4 border-[#f64f59] rounded-r-lg'>
+          <div className='grid bg-[#f4f2f2] w-9/12 h-16 absolute gap-2 left-20 border-l-4 border-[#f64f59] rounded-r-lg'>
             <p className=" text-sm font-medium text-black mt-3 ml-4 pl-2 pr-4">Live Session</p>
             <p className="text-xs text-black ml-4 pl-2 pr-4 pb-3">{date.getHours()}: 00PM</p>
           </div>
         </div>
-          <div className=' grid bg-[#F6F6F6] w-9/12 h-16 absolute gap-2 left-20 top-64'>
+          <div className=' grid bg-[#f4f2f2] w-9/12 h-16 absolute gap-2 left-20 top-64'>
             <p className=" text-sm font-medium text-black mt-3 ml-4 pl-2 pr-4">Peer to Peer Learning</p>
             <p className="text-xs text-black ml-4 pl-2 pr-4 pb-3">{date.getHours()}: 00PM</p>
           </div>
@@ -131,12 +131,12 @@ const Calendar = () => {
               <p className=" text-xs text-black ml-2 pl-2 mt-2 pr-6 pb-3">{getCurrentDay()}</p>
             </div>
 
-            <div className='grid bg-[#F6F6F6] w-9/12 h-16 absolute gap-3 left-20  '>
+            <div className='grid bg-[#f4f2f2] w-9/12 h-16 absolute gap-3 left-20  '>
               <p className=" text-sm font-medium text-black mt-3 ml-4 pl-2 pr-4">Live Session</p>
               <p className="text-xs text-black ml-4 pl-2 pr-4 pb-3">{date.getHours()}: 00PM</p>
             </div>
           </div>
-          <div className='peer-learning grid bg-[#F6F6F6] w-9/12 h-16 absolute gap-2 left-20'>
+          <div className='peer-learning grid bg-[#f4f2f2] w-9/12 h-16 absolute gap-2 left-20'>
             <p className=" text-sm font-medium text-black mt-3 ml-4 pl-2 pr-4">Peer to Peer Learning</p>
             <p className="text-xs text-black ml-4 pl-2 pr-4 pb-3">{date.getHours()}: 00PM</p>
           </div>
@@ -162,8 +162,8 @@ const Calendar = () => {
           {/* <Link to= "/dashboard"> */}
             <button  
               onClick={props.showAddEventModal} 
-              className="add-event-btn h-16  flex items-center bg-[#f64f59] text-white pl-10  text-sm text-center hover:bg-red-500 rounded-xl align-center"
-              style={{width: "324px", height: "60px", position: "relative", marginTop: "9rem", left: "357%"}} 
+              className="add-event-btn h-16  flex justify-center items-center bg-[#f64f59] text-white pl-8  text-sm text-center hover:bg-red-500 rounded-xl align-center"
+              style={{width: "312px", height: "60px", position: "relative", marginTop: "9rem", left: "395%"}} 
             > Add Event
             </button>
         </div>
