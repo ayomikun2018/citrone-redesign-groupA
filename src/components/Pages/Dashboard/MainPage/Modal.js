@@ -23,7 +23,7 @@ import './Modal.css'
       <React.Fragment>
       <div>
       </div>
-      <div className=" z-0 flex w-4/5 h-20 -ml-4 mt-6 border border-gray-400 drop-shadow bg-[#f1f1f1]  rounded-xl hover:bg-[#f1f1f1] cursor-pointer hover:transition-all duration-300 ease-in-out hover:duration-700 hover:delay-500" 
+      <div className=" z-0 flex w-4/5 h-20 -ml-4 mt-6 border border-gray-400 drop-shadow bg-[#fbfbfb]  rounded-xl hover:bg-[#f1f1f1] cursor-pointer hover:transition-all duration-300 ease-in-out hover:duration-700 hover:delay-500" 
         onMouseEnter={handleMouseEnter} 
         onMouseLeave={handleMouseLeave}>
         

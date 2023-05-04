@@ -1,14 +1,13 @@
 
 .dashboard-body-container{
-    min-width: fit-content;
-    width: 103%;   
+    width:60%;   
     height:300vh;
     z-index: inherit;
     position: absolute;
     top: 12%;
     left: 0%;
     bottom: 20%;
-    background-color: #f1f1f1;
+    background-color: #fbfbfb;
 }
 
 /* Module session */
