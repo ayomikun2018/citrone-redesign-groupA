@@ -33,7 +33,7 @@ const Sidebar = () => {
 
   return (
     <React.Fragment>
-        <div className='sidebar bg-[#fbfbfb] w-1/6 h-full fixed border-r-2 z-10 top-12'>
+        <div className='sidebar bg-[#fbfbfb] w-1/6 h-full fixed border-r-2 z-10 top-12' style={{ }}>
           <div className='mt-12'></div>
             <div className='sidebar-list'>
               {

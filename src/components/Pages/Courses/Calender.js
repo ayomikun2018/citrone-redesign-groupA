@@ -72,7 +72,7 @@ import './Calender.css'
 
 
 
-                            <div className=" left-72 justify-end absolute cursor-pointer pt-4">
+                            <div className=" left-56 justify-end absolute cursor-pointer pt-4">
                                 {/* <button onClick={handlePrevYear} ><PrevIcon.GrFormPrevious className="w-8 h-8 text-blue-500 "/></button> */}
                                 <button onClick={handlePrevMonth}><img src={PrevIcons} alt='prevIcon' className=" w-5 h-5 fill-red-500 mt-2 mr-6" /></button>
                                 <button onClick={handleNextMonth}><img src={NextIcons} alt='nextIcon' className="w-5 h-5 fill-red-500 mt-2" /></button>
@@ -82,7 +82,7 @@ import './Calender.css'
 
                         {/* Get days of the week */}
                         <div className=' flex mt-4 place-content-center text-xs font-medium'>
-                            <ul className='flex float-right gap-7 pt-2'>
+                            <ul className='flex float-right gap-5 pt-2'>
                                 {
                                     daysOfWeek.map(day => (
                                         <li key={day}>{day}</li>

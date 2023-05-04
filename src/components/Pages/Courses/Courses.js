@@ -34,11 +34,15 @@ const Courses = () => {
             <p className="text-xs">Resume</p>
           </div>
         </div>
-        <input type='text' placeholder='Search' className='absolute h-12 w-96 top-5 left-3/4 ml-64 index-0 pl-16 pt-1 border border-grey rounded-xl '></input>
-        <FontAwesomeIcon icon={faSearch} className='absolute top-9 text-gray-300 left-3/4 ml-72 w-5 h-5' />
-        <h1 className="text-base absolute top-14 -right-48 font-extrabold mt-10 mb-10">My schedule</h1>
-        <FontAwesomeIcon icon={faPlusCircle} className='absolute ml-96 left-full top-24 text-[#F64F59] w-8 h-5' />
-        <div class="absolute top-32 index-0 left-3/4 ml-52 mt-3">
+
+        <input type='text' placeholder='Search' class='absolute h-12 w-96 top-5 left-3/4 ml-64 index-0 pl-16 pt-1 border border-grey rounded-xl '></input>
+        <FontAwesomeIcon icon={faSearch} class='absolute top-9 text-gray-300 left-3/4 ml-72 w-5 h-5' />
+        <h1 class="text-base absolute top-14 -right-44 font-extrabold mt-10 mb-10">My schedule</h1>
+        <FontAwesomeIcon icon={faPlusCircle} class='absolute ml-96 left-full top-24 text-[#F64F59] w-8 h-5' />
+
+
+        <div class=" w-40 absolute top-32 index-0 left-3/4 ml-52 mt-3">
+
           <Calender />
         </div>
         <h1 className="text-2xl font-extrabold mt-8">Course Content</h1>
