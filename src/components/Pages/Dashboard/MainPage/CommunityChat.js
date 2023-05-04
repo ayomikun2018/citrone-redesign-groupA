@@ -33,7 +33,7 @@ const CommunityChat = () => {
           chats.map((element, value) => {
             return (
               <div 
-              className='announce-list grid relative h-52 ml-12 mt-6 mr-12  bg-[#f1f1f1] p-1 rounded-xl border border-slate-300 drop-shadow-md '
+              className='announce-list grid relative h-52 ml-12 mt-6 mr-12  bg-[#fbfbfb] p-1 rounded-xl border border-slate-300 drop-shadow-md '
               key={value}
               onClick={() => {}}
               >
