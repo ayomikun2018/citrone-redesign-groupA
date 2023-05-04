@@ -45,7 +45,7 @@ function ProfileForm() {
 
   return (
     <React.Fragment>
-    <form onSubmit={handleFormSubmit} className="max-w-md mx-auto mt-8">
+    <form onSubmit={handleFormSubmit} className="max-w-md mx-auto mt-8 ">
       <div></div>
       <div className=" absolute flex left-44 top-32">
         {selectedFile ? (

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import Navbar from '../../Navigation/Navbar/Navbar'
 import Sidebar from '../../Navigation/Sidebar/Sidebar'
+
 import '../../Navigation/Sidebar/Sidebar.css'
 import NextIconBlk from "../Dashboard/DashboardAssets/next-blk.svg"
 // import ContactPage from './ContactPage';
@@ -42,7 +43,7 @@ const Settings = ({setSelectedFile}) => {
   const settingsOptions = [
     { id: 1, name: "My Profile" },
     { id: 2, name: "Theme & Appearance" },
-    { id: 3, name: "Account Setting" },
+    { id: 3, name: "Account Settings" },
     { id: 4, name: "Privacy" },
 
   ];
@@ -63,7 +64,7 @@ const Settings = ({setSelectedFile}) => {
         return <Profile />;
       case "Theme & Appearance":
         return <ThemeCheckBoxForm />;
-      case "Account Setting":
+      case "Account Settings":
         return (
         <span style={{ color: "[#f64f59]"}}>
         <AccountSettingPage />
@@ -82,7 +83,7 @@ const Settings = ({setSelectedFile}) => {
     <div className=''> 
       <Navbar />
       <Sidebar />
-      <div className=' z-30 grid fixed left-64 font-poppins' style={{width: '80%', maxWidth: '100%',  backgroundColor: 'white', height: '30%', top: '98px'}}>
+      <div className=' z-30 grid fixed left-64 font-poppins' style={{width: '80%', maxWidth: '100%', height: '30%', top: '98px'}}>
         <div className='absolute top-10 left-16 flex'>
           <div className='flex gap-1'>
             <Link to='/dashboard'>
@@ -91,13 +92,13 @@ const Settings = ({setSelectedFile}) => {
             <img src={NextIconBlk} alt='next-icon' className=' w-3 h-3 mt-1'/>
           </div>
           <div className='flex gap-1 ml-1'>
-            <Link to='/dashboard'>
+            <Link to='/settings'>
               <p className=' text-sm font-medium font-poppins text-black hover:text-[#f64f59]'>Settings</p>
             </Link>
             <img src={NextIconBlk} alt='next-icon' className=' w-3 h-3 mt-1 text-black'/>
           </div>
           <div className='flex gap-1 ml-1'>
-            <Link to='/dashboard'>
+            <Link to='/settings'>
               <p className=' text-sm font-medium font-poppins text-black hover:text-[#f64f59]'>Account Settings</p>
             </Link>
             <img src={NextIconBlk} alt='next-icon' className=' w-3 h-3 mt-1 text-black'/>
