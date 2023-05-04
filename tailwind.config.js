@@ -4,7 +4,7 @@ module.exports = {
   theme: {
    extend:{
       color: {
-        'citrone-red' : '#f64f59',
+        'citrone-red' : '#f4f2f2',
         'citrone-red2' : '#F8727A',
         'ae-bg' : '#FBFBFB',
         'chat-color' : '#f1f1f1' ,

@@ -20,6 +20,8 @@ import Settings from './components/Pages/Settings/Settings'
 import LightMode from './components/Pages/LightMode/LightMode'
 import Message from './components/Pages/Message/Message'
 import Logout from './components/Pages/Logout/Logout'
+import Profile from './components/Pages/Settings/Profile/Profile'
+import ProfileUpdatePage from "./components/Pages/Settings/ProfileUpdatePage"
 
 function App() {
   return (
@@ -40,6 +42,10 @@ function App() {
    <Route exact path= '/taskprogress' element = {<TaskProgress/>}/>
    <Route exact path= '/assignment' element = {<Assignment/>}/>
    <Route exact path= '/assignmentgrade' element = {<AssignmentGrade/>}/>
+   <Route exact path= '/profile-update-page' element = {<ProfileUpdatePage/>}/>
+
+
+
 
 
     {/* Sidebar pages */}
