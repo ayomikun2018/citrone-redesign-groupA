@@ -24,26 +24,28 @@ const Dashboard = (props) => {
 
   return (
     <>
-    <div className=''>
+    <div className=' w-full bg-[#fbfbfb]' >
        <Navbar />
-       <Sidebar />
-       <MainPage />
-    </div>
-    <div className=''>
-      <AddEventButton showAddEventModal={toggleModal}/>
-    {showAddEventModal && (
-        <div className="fixed z-10 inset-0 overflow-y-auto">
-          <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div className="fixed inset-0 transition-opacity">
-              <div className="absolute inset-0 bg-gray-400 opacity-50"></div>
+       <div className='flex'>
+        <Sidebar />
+        <MainPage />
+       </div>
+   
+      <div className=''>
+        <AddEventButton showAddEventModal={toggleModal}/>
+        {showAddEventModal && (
+            <div className="fixed z-10 inset-0 overflow-y-auto">
+              <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div className="fixed inset-0 transition-opacity">
+                  <div className="absolute inset-0 bg-gray-400 opacity-50"></div>
+                </div>
+                <AddEvents onClick={handleAddEvent} onClose={closeAddEventModal}/> 
+                
+              </div>
             </div>
-            <AddEvents onClick={handleAddEvent} onClose={closeAddEventModal}/> 
-            
-          </div>
-        </div>
-      )}
-  
+          )}
 
+      </div>
     </div>
     </>
   )
