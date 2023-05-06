@@ -7,7 +7,7 @@ import Bell from "../../Pages/Dashboard/DashboardAssets/notification.svg";
 
 const Navbar = () => {
   return (
-    <div class=" fixed  bg-[#fbfbfb] shadow border display: flex z-20" style={{ width: "100%", height: "5.5rem"}}>
+    <div class=" fixed top-0  bg-[#fbfbfb] shadow border flex z-20" style={{ width: "100%", height: "5.5rem"}}>
 
  
     <div className='flex ml-8 mt-2 flex-wrap ' >
