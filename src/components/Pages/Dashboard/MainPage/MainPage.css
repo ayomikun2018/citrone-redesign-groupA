@@ -1,36 +1,23 @@
 
 .dashboard-body-container{
-    width:60%;   
+    /* width:60%;   
     height:300vh;
     z-index: inherit;
-    position: absolute;
+    position: absolute; */
     top: 12%;
     left: 0%;
     bottom: 20%;
     background-color: #fbfbfb;
 }
 
-/* Module session */
-.module1{
-    display:flex;
-    flex-wrap: wrap;
-    width: 663px;
-    height: 246px; 
-    margin-left:270px;
-    margin-top: -60px;
-    gap: 42px;
-    
-}
-
 
 /* relative   list-item w-3/4 min-w-max h-auto border-l bg-transparent border-slate-300 font-poppins  */
 
 .community-chat1{
-    position: relative;
+  
     width: 450px;
     height: auto;
-    top:14%; 
-    left:45rem;
+    
 }
 .announce-1{
     width: 417px;

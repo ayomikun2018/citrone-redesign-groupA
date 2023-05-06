@@ -115,12 +115,12 @@ const Settings = ({setSelectedFile}) => {
         <div className=" z-10 flex relative top-10" style={{ left: '6%',}}>
             <div className="">
               <ul className='flex absolute font-poppins text-base font-normal space-x-8 whitespace-nowrap ' >{renderSettingsOptions()}</ul>
-              <div className=' absolute contact-underline top-10 -left-4 border border-[#A5A5A5]' style={{ width: '180%'}}></div>
+              <div className=' absolute contact-underline top-10 -left-4 border border-[#A5A5A5]' style={{ width: '90%'}}></div>
 
             </div>
           
         </div>
-        <div className="  relative -left-10 overflow-auto" style={{ width: '110%', minHeight: '100vh', top: '5rem'}}>
+        <div className=" relative -left-10 overflow-auto" style={{ width: '110%', minHeight: '100vh', top: '5rem'}}>
          {renderSelectedOption()}
         </div> 
       </div>
