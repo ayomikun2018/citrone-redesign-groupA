@@ -163,7 +163,7 @@ const Calendar = () => {
             <button  
               onClick={props.showAddEventModal} 
               className="add-event-btn h-16  flex justify-center items-center bg-[#f64f59] text-white pl-8  text-sm text-center hover:bg-red-500 rounded-xl align-center"
-              style={{width: "312px", height: "60px", position: "relative", marginTop: "28rem", left: "408%"}} 
+              style={{width: "312px", height: "60px", position: "relative", marginTop: "28rem", left: "390%"}} 
             > Add Event
             </button>
         </div>
