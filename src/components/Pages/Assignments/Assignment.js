@@ -22,7 +22,7 @@ export default function Assignment() {
         <div className={classes.all}>
         <section className={classes.body}>
             <h2>Assignment 3</h2>
-            <h3>Module 9; Lesson 3</h3>
+            <h3>Module 1; Lesson 3</h3>
             <h4>Start working on previewing all the sketches and turning them into wireframes for the Citrone main action pages.</h4>
             <span className={classes.spanC}>View file</span>
             {/* <div className={classes.search}> */}

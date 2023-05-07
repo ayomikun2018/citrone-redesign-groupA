@@ -1,0 +1,224 @@
+.checkBackground{
+    /* margin-bottom: 100vh; */
+    /* background: grey; */
+    /* width: 100vw;
+    height: 100vh; */
+/* border: 1px solid green;; */
+
+    /* background-color: rgba(200, 200, 200); */
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.checkContainer{
+    /* background-color: aqua; */
+    padding: 20px;
+    border-radius: 20px;
+    height: 385px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+    width: 513px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 200px;
+    margin-top: 180px;
+    /* margin-right: 210px; */
+    background-color: white;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    /* gap: 150px; */
+    text-align: center;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkBackground h2{
+    width: 128px;
+height: 39px;
+font-weight: 500;
+font-size: 26px;
+margin-left: 170px;
+
+}
+.checkBackground h3{
+    font-weight: 500;
+font-size: 18px;
+white-space: nowrap;
+
+}
+.x1{
+    color:#F64F59;
+    height: 210px;
+    width: 250px;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    /* margin-left: 100px; */
+    
+}
+.cancelB{
+    display: flex;
+    flex-direction: column;
+    height: 25.5px;
+    width: 25.5px;
+    color: white;
+    border: none;
+    /* display: none; */
+    /* border: 1px solid green;; */
+    /* margin-left: 100px; */
+}
+
+
+
+
+
+
+
+.assignment{
+    padding-left:17.3% ;
+    padding-top: 5.6%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: rgba(12, 11, 11, 0.4);
+
+}
+.breadcrumbs{
+    font-size: 14px;
+    height: 67px;
+    width: 767px;
+    align-content: center;
+    align-items: center;
+    padding: 40px 40px 0px 40px;
+    /* border: 1px solid green;; */
+}
+.spanB{
+    /* color:#F64F59; */
+    font-size: 14px;
+}
+.all{
+    display: flex;
+    flex-direction: row;
+}
+.body{
+    display: flex;
+    flex-direction: column;;
+    width: 726px;
+    /* border: 1px solid green; */
+    padding: 20px 40px ;
+    gap: 10px;
+    
+}
+.body h2{
+    font-weight: 600;
+    font-size: 20px;
+}
+.body h3{
+    font-weight: 500;
+    font-size: 18px;
+}
+.body h4{
+    width: 532px;
+}
+.body span {
+    font-size: 14px;
+
+}
+
+.spanC {
+    color:#F64F59;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 515px;
+    border: 0.6px solid #8E8E8E;
+    height: 161px;
+    border-radius: 10px;
+    padding: 20px;
+    outline: none;
+    background: grey;
+    
+    /* background-color: #FBFBFB; */
+}
+.attachSection{
+    display: flex;
+    width: 515px;
+
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid green;; */
+
+}
+.file{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    /* border: 1px solid green;; */
+    gap:10px;
+    align-items: center;
+
+    height: 60px;
+}
+.file p{
+    font-size: 14px;
+}
+.attach{
+    width: 18px;
+    height: 17px;
+}
+.assignment button{
+    /* margin-left:50px; */
+    height: 60px;
+    width: 141px;
+    border: 0.6px solid #F64F59;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #F64F59;
+    transition-duration: 0.4s;
+  }
+  .assignment button:hover {
+    background-color: #F64F59;
+    color: white; 
+  }
+  /* ................................................................Side */
+  .side{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 423px;
+    height: 994px;
+  /* border: 1px solid red; */
+    padding: 40px 0px 0px 41px;
+    /* background: #FBFBFB; */
+    border-left: 0.6px solid #D2D2D2;
+}
+.side img{
+    width: 321px;
+    height: 90px;
+}
+.imgB{
+    width: 326px;
+    height: 68px;
+}
+.side h2{
+    font-weight: 600;
+    font-size: 18px;
+}
+.side h3{
+    font-weight: 500;
+    font-size: 12px;
+}
+.side p{
+  /* font-weight: 400; */
+font-size: 12px;
+width: 326px;
+/* height: 72px; */
+}

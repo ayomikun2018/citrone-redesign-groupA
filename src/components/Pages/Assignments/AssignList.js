@@ -22,7 +22,7 @@ export default function AssignList() {
               <img src={imageA} alt="img1"  />
               <div className={classes.titles} >
                 <h3>Wireframe and Prototypes </h3>
-                <p>Module 5, Assignment 1</p>
+                <p>Module 1, Assignment 3</p>
               </div>
             </div>
             <div className={classes.info}>

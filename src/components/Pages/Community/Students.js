@@ -5,10 +5,12 @@ import sTwo from "./communityAssets/Ellipse 1 (1).svg";
 import sThree from "./communityAssets/Group 85.svg";
 import { Link } from "react-router-dom";
 
+// function Students({firstName, lastName, track, }) {
+
 function Students() {
   return (
     <div className= {classes.students}>
-      {/* Student divs */}
+    
       <div>
         <Link to="#"  className= {classes.links}>
           <img src={sOne} alt="Logo" />
@@ -19,16 +21,17 @@ function Students() {
          
         </Link>
       </div>
-      <div>
+    
+      {/* <div>
         <Link to="#" className= {classes.links}>
           <img src={sTwo} alt="Logo" />
           <section>
-          <p>Jane Micheal</p>
-          <h4>Frontend Dev</h4>
+          <p>{firstName} {lastName} </p>
+          <h4>{track}</h4>
           </section>
          
         </Link>
-      </div>
+      </div> */}
 
       <div>
         <Link to="#" className= {classes.links}>
@@ -55,8 +58,8 @@ function Students() {
         <Link to="#" className= {classes.links}>
           <img src={sTwo} alt="Logo" />
           <section>
-          <p>Jane Micheal</p>
-          <h4>Frontend Dev</h4>
+          <p>Fred Holloway</p>
+          <h4>UI/UX Designer</h4>
           </section>
          
         </Link>
