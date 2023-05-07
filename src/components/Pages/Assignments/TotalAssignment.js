@@ -4,7 +4,12 @@ import Navbar from '../../Navigation/Navbar/Navbar';
 import Sidebar from '../../Navigation/Sidebar/Sidebar';
 import classes from './totalAssignments.module.css';
 import { FiSearch } from 'react-icons/fi';
-import imageA from './assignmentsAssets/Rectangle 29880.svg'
+import imgA from './assignmentsAssets/Rectangle 29880.svg'
+import imgB from './assignmentsAssets/Rectangle 29881.svg'
+import imgC from './assignmentsAssets/Rectangle 29882.svg'
+import imgD from './assignmentsAssets/Rectangle 29883.svg'
+
+
 
 // import AssignList from './AssignList';
 
@@ -60,30 +65,30 @@ export default function TotalAssignment() {
                 </div>
                 </div>
                 <div className={classes.totalAssign}>
-                <Link to ='/assignment'>
+                <Link to='/assignment'>
                     <div className={classes.assignCard} >
                         <div className={classes.assignDetails}>
-                        <img src={imageA} alt="img1"  />
-                        <div className={classes.titles} >
+                            <img src={imgA} alt="img1"  />
+                            <div className={classes.titles} >
                             <h2>Module 1</h2>
                             <h3>Wireframe and Prototypes </h3>
-                            <p>2 Assignments </p>
-                        </div>
+                            <p>1 Assignment </p>
+                            </div>
                         </div>
                         <div className={classes.info}>
-                        <p>Taiwo</p>
+                        <p>Timi.A</p>
                         <h4>04/01/23</h4>
-                        <Link to='/#'><button  className={classes.graded} >Graded</button></Link>
-                    </div>
+                        <Link to='/#'><button  className={classes.notSubmitted} >Not Submitted</button></Link>
+                        </div>
                     </div>
                 </Link>
                 <Link to ='#'>
                     <div className={classes.assignCard} >
                         <div className={classes.assignDetails}>
-                        <img src={imageA} alt="img1"  />
+                        <img src={imgB} alt="img1"  />
                         <div className={classes.titles} >
                             <h2>Module 2</h2>
-                            <h3>Wireframe and Prototypes </h3>
+                            <h3>Design Systems </h3>
                             <p> 2 Assignments </p>
                         </div>
                         </div>
@@ -97,10 +102,10 @@ export default function TotalAssignment() {
                 <Link to='#'>
                     <div className={classes.assignCard} >
                         <div className={classes.assignDetails}>
-                            <img src={imageA} alt="img1"  />
+                            <img src={imgC} alt="img1"  />
                             <div className={classes.titles} >
-                            <h2>Module 2</h2>
-                            <h3>Design Systems </h3>
+                            <h2>Module 3</h2>
+                            <h3>High Fidelity Designs </h3>
                             <p>1 Assignment </p>
                             </div>
                         </div>
@@ -118,10 +123,10 @@ export default function TotalAssignment() {
                 <Link to ='/assignment'>
                     <div className={classes.assignCard} >
                         <div className={classes.assignDetails}>
-                        <img src={imageA} alt="img1"  />
+                        <img src={imgD} alt="img1"  />
                         <div className={classes.titles} >
-                            <h2>Module 1</h2>
-                            <h3>Wireframe and Prototypes </h3>
+                            <h2>Module 4</h2>
+                            <h3>Design Thinking </h3>
                             <p>2 Assignments </p>
                         </div>
                         </div>
@@ -135,9 +140,9 @@ export default function TotalAssignment() {
                 <Link to ='#'>
                     <div className={classes.assignCard} >
                         <div className={classes.assignDetails}>
-                        <img src={imageA} alt="img1"  />
+                        <img src={imgA} alt="img1"  />
                         <div className={classes.titles} >
-                            <h2>Module 2</h2>
+                            <h2>Module 5</h2>
                             <h3>Wireframe and Prototypes </h3>
                             <p> 2 Assignments </p>
                         </div>
@@ -152,9 +157,9 @@ export default function TotalAssignment() {
                 <Link to='#'>
                     <div className={classes.assignCard} >
                         <div className={classes.assignDetails}>
-                            <img src={imageA} alt="img1"  />
+                            <img src={imgA} alt="img1"  />
                             <div className={classes.titles} >
-                            <h2>Module 2</h2>
+                            <h2>Module 6</h2>
                             <h3>Design Systems </h3>
                             <p>1 Assignment </p>
                             </div>

@@ -113,6 +113,7 @@ align-content: center;
     display: flex;
     flex-direction: row; 
     gap: 10px;
+
     /* border: 1px solid red; */
     /* border: 1px solid red; */
     width: 35%;
@@ -130,6 +131,7 @@ align-content: center;
 .assignCard img{
     width: 86px;
 height: 90px;
+border-radius: 10px;
 /* overflow: hidden; */
 /* border-radius: 10px; */
 
