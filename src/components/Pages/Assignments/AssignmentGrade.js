@@ -37,14 +37,15 @@ function AssignmentGrade() {
         <h1>Assignment 1 -  <span className={classes.span}>Awaiting Grade</span></h1>
           <h2>Module 1; Lesson 2</h2>
         </div>
-          <h3>Due: 10th Oct 2022</h3>
-          <h3>Submitted: 12th Oct 2022</h3>
-          <h4>  1&#41; In your own words, describe what you understand as design thinking.</h4>
+          <h3>Due: 14th May 2023</h3>
+          <h3>Submitted: 11th May 2023</h3>
+          <h4>Start working on previewing all the sketches and turning them into wireframes for the Citrone main action pages.</h4>
+          {/* <h4>  1&#41; In your own words, describe what you understand as design thinking.</h4>
           <h4>  2&#41; In a Google doc, sumarize and add examples of websites and products you feel have rightfully applied this process.</h4>
-          <h4>  3&#41; List the design thinking processes</h4>
+          <h4>  3&#41; List the design thinking processes</h4> */}
           <div className={classes.answer}>
             <h2>Your Answer</h2>
-            <textarea  className={classes.search}  placeholder ='Type here' rows="4" cols="40"></textarea>
+            <textarea  className={classes.search}  placeholder ='answer...' rows="4" cols="40">answerr</textarea>
             <div className={classes.attachSection} >
                 <div className={classes.file}>
                     <p>Attach file</p>
