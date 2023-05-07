@@ -102,7 +102,7 @@ const MainPage = () => {
 
         {/* second div */}
         <div className='flex-1'>
-          <div className='w-full p-10 mt-0 h-screen bg-pink-300 ml-28' style={{}}>
+          <div className='w-full p-10 mt-0 h-screen bg-[#fbfbfb] ml-28'>
             <CommunityChat /> 
           </div>
         </div>
