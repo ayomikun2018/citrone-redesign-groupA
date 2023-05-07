@@ -70,11 +70,11 @@ const MainPage = () => {
   return (
     <React.Fragment >
 
-      <div className='flex flex-row p-10 mt-10  ml-52' style={{ width: 'calc(100% - 16.66667%)', height: '' }}>
+      <div className='flex flex-row p-10 mt-10 flex-1' style={{ width: 'calc(100% - 16.66667%)', height: '', marginLeft: '16rem' }}>
         <div className='flex-1' style={{}}>
           
           {/* first div */}
-          <div className='pl-4 font-poppins mt-10 ml-14' style={{ width: '50rem' }}> 
+          <div className='pl-4 font-poppins  mt-10 ml-0' style={{ width: '40rem' }}> 
           
             <div className='w-60 h-40' style={{}}>
               <h3 className='font-semibold' style={{ fontSize: '22px' }}>Hi, Dolamu</h3>
@@ -102,7 +102,7 @@ const MainPage = () => {
 
         {/* second div */}
         <div className='flex-1'>
-          <div className='w-full p-10 mt-0 h-screen bg-[#fbfbfb]'>
+          <div className='w-full p-10 mt-0 h-screen bg-[#fbfbfb] ml-28'>
             <CommunityChat /> 
           </div>
         </div>
