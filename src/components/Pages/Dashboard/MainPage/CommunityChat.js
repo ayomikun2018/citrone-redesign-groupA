@@ -18,7 +18,7 @@ const CommunityChat = () => {
   return (
     <React.Fragment>
       {/* has some css in MainPage.css */}
-      <div className=' community-chat1list-item min-w-max border-l bg-transparent border-slate-400 font-poppins' style={{ marginTop: '6.5rem' }}>
+      <div className=' community-chat1list-item min-w-max border-l bg-transparent border-slate-300 font-poppins' style={{ marginTop: '6.5rem' }}>
         <div className=' announce-1 z-10 relative top-30 flex bg-[#fbfbfb] shadow-md p-1 rounded-xl' style={{ marginLeft: '3rem' }}>
           <img src={Ellipse} alt={Ellipse} className='w-16 h-16 mt-0 p-1'/> 
           <p className='text-sm p-1 mt-4 ml-3 italic whitespace-nowrap font-poppins'>Announce something to your class</p>

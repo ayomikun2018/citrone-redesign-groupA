@@ -13,7 +13,7 @@ const Tracks = () => {
     <React.Fragment>
         <div className='flex'>
             <div className='ml-4'>
-                <div className='flex space-x-66 gap-96 mt-16'>
+                <div className='flex space-x-66 gap-96 mt-12'>
                     <p className=' -ml-5 p-1 font-medium' style={{ fontSize: '18px'}}>Course You’re Taking</p>
                     <Link to="/"><p className=' pb-2 text-sm font-semi-bold text-red-500 ml-16' >View All <span>&#62;</span> </p></Link>
                 </div>
