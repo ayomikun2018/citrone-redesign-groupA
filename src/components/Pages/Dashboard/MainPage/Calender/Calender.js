@@ -62,13 +62,11 @@ const Calendar = () => {
   //Get every day of the week
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
    
-
-
   
 
   return (
     <React.Fragment>
-    <div className="calender h-screen bg-[#ffffff] left-12 top-8 drop-shadow-md relative rounded-xl">
+    <div className=" bg-[#fbfbfb] left-12 top-8 drop-shadow-md relative rounded-xl" style={{width: "26rem", height: "40rem"}}>
       <div className="flex mt-4 place-content-center justify-between">
 
         {/*month-year function  */}
@@ -96,7 +94,7 @@ const Calendar = () => {
       </div>
 
   
-      <div className=" absolute text-sm left-8 gap-8 grid grid-cols-7 top-32">
+      <div className=" absolute place-content-center text-sm left-8 gap-8 grid grid-cols-7 top-32">
         {days.map((day, index) => (
           <div key={index} className="h-4 grid place-content-center text-sm -mt-10">
             <h1 className="h-6 w-6 mt-16 rounded-md text-center text-sm mb-4 text-black font-semibold  hover:bg-red-500 hover:text-white transition-all cursor-pointer" 
@@ -111,18 +109,18 @@ const Calendar = () => {
       </div>
       <div className="grid">
         <div className=' w-full h-16 top-44 flex absolute'>
-            <div className='grid mb-2  ml-3'>
-              <p className=" text-lg font-bold text-[#f64f59] ml-3 mt-3 pl-2 -mb-3 pr-4">{date.getDate()}</p>
-              <p className=" text-xs text-[#f64f59] ml-2 pl-2 mt-2 pr-4 pb-3">{getCurrentDay()}</p>
-              
-            </div>
+          <div className='grid mb-2  ml-3 '>
+            <p className=" text-lg font-bold text-[#f64f59] ml-3 mt-3 pl-2 -mb-3 pr-4">{date.getDate()}</p>
+            <p className=" text-xs text-[#f64f59] ml-2 pl-2 mt-2 pr-4 pb-3">{getCurrentDay()}</p>
+            
+          </div>
 
-            <div className='grid bg-[#F6F6F6] w-9/12 h-16 absolute gap-2 left-20'>
-              <p className=" text-sm font-medium text-black mt-3 ml-4 pl-2 pr-4">Live Session</p>
-              <p className="text-xs text-black ml-4 pl-2 pr-4 pb-3">{date.getHours()}: 00PM</p>
-            </div>
+          <div className='grid bg-[#f6f6f6] w-9/12 h-16 absolute gap-2 left-20 border-l-4 border-[#f64f59] rounded-r-lg'>
+            <p className=" text-sm font-medium text-black mt-3 ml-4 pl-2 pr-4">Live Session</p>
+            <p className="text-xs text-black ml-4 pl-2 pr-4 pb-3">{date.getHours()}: 00PM</p>
+          </div>
         </div>
-          <div className=' grid bg-[#F6F6F6] w-9/12 h-16 absolute gap-2 left-20 top-64'>
+          <div className=' grid bg-[#f6f6f6] w-9/12 h-16 absolute gap-2 left-20 top-64'>
             <p className=" text-sm font-medium text-black mt-3 ml-4 pl-2 pr-4">Peer to Peer Learning</p>
             <p className="text-xs text-black ml-4 pl-2 pr-4 pb-3">{date.getHours()}: 00PM</p>
           </div>
@@ -133,12 +131,12 @@ const Calendar = () => {
               <p className=" text-xs text-black ml-2 pl-2 mt-2 pr-6 pb-3">{getCurrentDay()}</p>
             </div>
 
-            <div className='grid bg-[#F6F6F6] w-9/12 h-16 absolute gap-3 left-20  '>
+            <div className='grid bg-[#f6f6f6] w-9/12 h-16 absolute gap-3 left-20  '>
               <p className=" text-sm font-medium text-black mt-3 ml-4 pl-2 pr-4">Live Session</p>
               <p className="text-xs text-black ml-4 pl-2 pr-4 pb-3">{date.getHours()}: 00PM</p>
             </div>
           </div>
-          <div className='peer-learning grid bg-[#F6F6F6] w-9/12 h-16 absolute gap-2 left-20'>
+          <div className='peer-learning grid bg-[#f6f6f6] w-9/12 h-16 absolute gap-2 left-20'>
             <p className=" text-sm font-medium text-black mt-3 ml-4 pl-2 pr-4">Peer to Peer Learning</p>
             <p className="text-xs text-black ml-4 pl-2 pr-4 pb-3">{date.getHours()}: 00PM</p>
           </div>
@@ -159,13 +157,13 @@ const Calendar = () => {
   export const AddEventButton = (props) => {
     
       return (
-        <div className=''> 
+        <div className=' inline-block '> 
         
           {/* <Link to= "/dashboard"> */}
             <button  
               onClick={props.showAddEventModal} 
-              className="add-event-btn h-16  flex items-center bg-[#f64f59] text-white pl-10  text-sm text-center hover:bg-red-500 rounded-xl align-center"
-              style={{width: "310px", height: "60px", position: "absolute",  top: "247%", left: "73%"}} 
+              className="add-event-btn h-16  flex justify-center items-center bg-[#f64f59] text-white pl-8  text-sm text-center hover:bg-red-500 rounded-xl align-center"
+              style={{width: "312px", height: "60px", position: "relative", marginTop: "28rem", left: "390%"}} 
             > Add Event
             </button>
         </div>

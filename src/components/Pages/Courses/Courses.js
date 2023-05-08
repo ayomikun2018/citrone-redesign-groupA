@@ -45,6 +45,7 @@ const Courses = () => {
         <FontAwesomeIcon icon={faPlusCircle} id="plus" className='absolute ml-96 left-full top-24 text-[#F64F59] w-8 h-5' />
         </a>
         <div class="absolute top-32 index-0 left-3/4 ml-52 mt-3">
+
           <Calender />
         </div>
         <h1 className="text-2xl font-extrabold mt-8">Course Content</h1>

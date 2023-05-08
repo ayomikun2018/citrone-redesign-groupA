@@ -17,12 +17,16 @@ import Assignment from "./components/Pages/Assignments/Assignment";
 import AssignmentGrade from "./components/Pages/Assignments/AssignmentGrade";
 import TaskProgress from "./components/Pages/Assignments/TaskProgress";
 import Settings from './components/Pages/Settings/Settings'
-import LightMode from './components/Pages/LightMode/LightMode'
+// import LightMode from './components/Pages/LightMode/LightMode'
 import Message from './components/Pages/Message/Message'
 import Logout from './components/Pages/Logout/Logout'
 import CoursesContent from "./components/Pages/Courses/CourseContent";
 import CoursesList from "./components/Pages/Courses/CourseList";
 import RecordedLiveSession from "./components/Pages/Courses/RecordedLiveSessions";
+import Profile from './components/Pages/Settings/Profile/Profile'
+import ProfileUpdatePage from "./components/Pages/Settings/ProfileUpdatePage"
+import CheckModal from "./components/Pages/Assignments/CheckModal";
+
 
 function App() {
   return (
@@ -42,10 +46,15 @@ function App() {
    <Route exact path= '/totalassignment' element = {<TotalAssignment/>}/>
    <Route exact path= '/taskprogress' element = {<TaskProgress/>}/>
    <Route exact path= '/assignment' element = {<Assignment/>}/>
+   <Route exact path= '/checkModal' element = {<CheckModal/>}/>
+
    <Route exact path= '/assignmentgrade' element = {<AssignmentGrade/>}/>
    <Route exact path= '/coursecontent' element = {<CoursesContent/>}/>
    <Route exact path= '/courselist' element = {<CoursesList/>}/>
    <Route exact path= '/recordedlivesessions' element = {<RecordedLiveSession/>}/>
+   <Route exact path= '/profile-update-page' element = {<ProfileUpdatePage/>}/>
+
+
 
 
     {/* Sidebar pages */}
@@ -56,7 +65,7 @@ function App() {
    <Route path= '/community' element = {<Community/>}/>
    <Route path= '/dashboard' element = {<Dashboard/>}/>
    <Route path= '/logout' element = {<Logout/>}/>
-   <Route path= '/lightmode' element = {<LightMode/>}/>
+   {/* <Route path= '/lightmode' element = {<LightMode/>}/> */}
    <Route path= '/help' element = {<Help/>}/>
 
    </Routes>

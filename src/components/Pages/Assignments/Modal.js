@@ -23,7 +23,7 @@ function Modal({closeModal}) {
     <button  className={classes.cancel} onClick ={() => closeModal(false)}> 
         <img src= {x} alt ='img'></img>Cancel
      </button>
-    <Link to ='/assignmentgrade'> <button  className={classes.submit}  onClick={()=>setOpenModal(true)}><img src= {t} alt ='img'></img> Submit</button></Link>
+    <Link to='/checkModal'><button  className={classes.submit}  onClick={()=>setOpenModal(true)}><img src= {t} alt ='img'></img> Submit</button></Link>
     </div>
     
     </div>

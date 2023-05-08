@@ -2,14 +2,13 @@
     box-sizing: border-box;
 }
 .sidebar{
-    /* //min-height: 100vh; */
+    /* min-height: 100vh;
     height: 944px;
-    width: 250px;
-    background: white;
+    width: 285px; */
     border-right: 1px solid #D2D2D2;
     box-shadow: 0px 0px 5px -1px #959696;
     position: fixed;
-    top: 10%; 
+    top: 4%; 
     z-index: 10; 
     padding: 1rem 0 0 0;
 }
@@ -36,8 +35,8 @@
     color: #757575;
     justify-content: center;
     align-items: center; 
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .sidebar-list .sidebar-row:hover{
@@ -45,7 +44,7 @@
     background: #FDDCDE;
     color: black;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 22px;
     
 }
 /* .sidebar-list #active{
@@ -82,7 +81,7 @@
 .sidebar-row .sidebar-title{
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     flex: 55%;
    

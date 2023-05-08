@@ -9,7 +9,7 @@ const BottomData_ = [
         id:1,
         icon: < DownBsIcons.BsToggleOff />,
         title: 'Light Mode',
-        link: '/lightmode'
+        link: '/home'
     },
     {
         id:2,
