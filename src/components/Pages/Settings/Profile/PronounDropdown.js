@@ -3,7 +3,7 @@ import downArrow from '../../Dashboard/DashboardAssets/down-arrow.svg'
 
 const pronounsList = [
   "he/him",
-  "she/ser",
+  "she/her",
   "they/them",
   "Others"
 ];

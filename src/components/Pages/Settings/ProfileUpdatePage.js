@@ -51,14 +51,14 @@ const ProfileUpdatePage = () => {
                 
                 <div className='grid'>
                 <p className='font-poppins text-base font-normal p-1 mt-2'>(UI/UX Designer)</p>
-                <span className='font-poppins italic text-base font-normal leading-loose p-1 mt-0'>“Lörem ipsum vulkanresa egorat”</span>
+                {/* <span className='font-poppins italic text-base font-normal leading-loose p-1 mt-0'>“Lörem ipsum vulkanresa egorat”</span> */}
                 </div>
 
                 <div className='mt-7 ml-' style={{ width: "79%"}}>
                     <p className='p-1 font-poppins font-semibold ' style={{ fontSize: "18px"}}>About</p>
-                    <p className=' font-poppins text-base font mt-1 p-1 leading-relaxed'>
+                    {/* <p className=' font-poppins text-base font mt-1 p-1 leading-relaxed'>
                         Lörem ipsum vulkanresa egorat. Trepura ner, bongen ingen krongar. Trafikmaktordning heteroitet, är senist. Lörem ipsum vulkanresa egorat. Trepura ner, bongen ingen krongar. Trafikmaktordning heteroitet, är senist. Lörem ipsum vulkanresa egorat. Trepura ner, bongen ingen krongar. Trafikmaktordning heteroitet, är senist. Lörem ipsum vulkanresa egorat. Trepura ner, bongen ingen krongar. Trafikmaktordning heteroitet, är senist. 
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className='grid mt-8 mb-28'>

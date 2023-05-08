@@ -24,9 +24,9 @@ const Dashboard = (props) => {
 
   return (
     <>
-    <div className=' w-full bg-[#fbfbfb]' style={{ }} >
+    <div className='relative w-full bg-[#fbfbfb]' style={{ }} >
        <Navbar />
-       <div className='relative min-h-screen flex'>
+       <div className=''>
         <Sidebar />
         <MainPage />
        </div>

@@ -34,10 +34,10 @@ const AccountSettingPage = () => {
                 </div>  
                 <div className=' absolute grid w-3/4 h-full ' style={{left: '5%', top: '5%'}}>
                     <form className='' onSubmit={handleSubmit}>
-                        <div className=' contact-input1 absolute top-24 flex h-40 rounded-t-lg  space-x-72 gap-64 font-poppins border border-gray-300' style={{width: '71%', top: '100px'}}>
-                            <div className='flex space-x-80 gap-64'>
+                        <div className=' contact-input1 absolute top-24 flex h-40 rounded-t-lg  space-x-72 gap-64 font-poppins border border-gray-300' style={{width: '75%', top: '100px'}}>
+                            <div className='flex space-x-80 '>
                                 <label className=' ml-8 mt-4 text-[#A5A5A5] text-sm ' >Email</label>
-                                <div className='flex mt-5 space-x-6'>
+                                <div className='absolute flex mt-5 space-x-6 right-10'>
                                     <img src={ContactEdit} alt='edit' className='w-5 h-5' />
                                     <img src={ContactEye} alt='eye' className=' w-5 h-5'/>
                                 </div>
@@ -52,12 +52,14 @@ const AccountSettingPage = () => {
                             />
                             <span className='absolute top-28 -left-64 text-sm text-[#A5A5A5] font-poppins'>This email is linked to your account.</span>
                         </div>
-                        <div className=' contact-input2 absolute flex h-40 space-x-72 gap-56 font-poppins border border-gray-300'  style={{ width: '71%', top: '259px'}}>
-                            <div className='flex space-x-80 gap-56'>
+
+                            {/* second box */}
+                        <div className='contact-input2 absolute flex h-40 space-x-72 gap-56 font-poppins border border-gray-300' style={{ width: '75%', top: '259px' }}>
+                            <div className='flex'>
                                 <label className='ml-8 mt-4 text-[#A5A5A5] text-sm' >Password</label>
-                                <div className='flex mt-5 space-x-6'>
+                                <div className='absolute flex mt-5 space-x-6 right-10'>
                                     <img src={ContactEdit} alt='edit' className='w-5 h-5' />
-                                    <img src={ContactEye} alt='eye' className=' w-5 h-5'/>
+                                    <img src={ContactEye} alt='eye' className=' w-5 h-5' />
                                 </div>
                             </div>
                             <input
@@ -66,15 +68,16 @@ const AccountSettingPage = () => {
                                 name='password'
                                 onChange={handleChange}
                                 // value= {}
-                                className=' absolute -left-64 top-12 w-96 h-12 text-xl font-semibold font-poppins placeholder-black focus:outline-none' 
+                                className='absolute -left-64 top-12 w-96 h-12 text-xl font-semibold font-poppins placeholder-black focus:outline-none'
                             />
                             <span className='absolute top-28 -left-64 text-sm text-[#A5A5A5] font-poppins'>This password improves your security.</span>
                         </div>
 
-                        <div className=' contact-input3 absolute flex h-40  space-x-72 gap-56 font-poppins border border-gray-300' style={{ width: '71%', top: '417px'}}>
-                            <div className='flex space-x-80 gap-48'>
+                            {/* Third box */}
+                        <div className=' contact-input3 absolute flex h-40  space-x-72 gap-56 font-poppins border border-gray-300' style={{ width: '75%', top: '417px'}}>
+                            <div className='flex space-x-80 '>
                                 <label className='ml-8 mt-4 text-[#A5A5A5] text-sm' >Phone number</label>
-                                <div className='flex mt-5 space-x-6'>
+                                <div className='absolute flex mt-5 space-x-6 right-10'>
                                     <img src={ContactEdit} alt='edit' className='w-5 h-5' />
                                     <img src={ContactEye} alt='eye' className=' w-5 h-5'/>
                                 </div>
