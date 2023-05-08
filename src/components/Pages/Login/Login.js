@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Logo from './Assets/citrone logo 1.svg'
+import Logo from './Assets/citrone logo 1.png'
 import GoogleIcon from './Assets/logos_google-icon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
@@ -25,42 +25,23 @@ const LogIn = () => {
   }
 
 
-  //Hooks for integrating API for backend server
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
-  // const usenavigate = useNavigate();
-
-  // const ProceedLogin = (e) => {
-  //    e.preventDefault();
-  //    fetch ("https://stutern-citrone-app.onrender.com/api/v1/users/login"+email).then((res) => {
-  //         return res.json();
-  //    }).then((resp) =>{
-  //     //console.log(resp)
-  //     if(Object.keys(resp).length === 0){
-  //       toast.error('Please enter valid email');
-  //     }else if (resp.password === password){
-  //       toast.sucess("sucess");
-  //       usenavigate('/Dashboard')
-  //     }
-  //     else{
-  //       toast.error('Please enter valid credentials');
-  //     }
-  //    }).catch((err) =>{
-  //     toast.error("Login failed due to :" + err.message);
-  //    });
-  // }
+ 
 
   return (
 
     <div className="font-poppins">
-      <img src={Logo} class="pl-10 pt-10 w-56 h-32" alt="Citrone Logo"></img>
+      {/* <img src={Logo} class="pl-10 pt-10 w-56 h-32" alt="Citrone Logo"></img> */}
+      <div className='flex'>
+         <img src={Logo} className="pl-10 pt-10 w-32 h-32" alt="Logo" />
+        <h1 class="pt-14" >Citrone</h1>
+      </div>
       <div className="h-screen flex items-center justify-center">
         <div className="h-full pt-24">
           <h1 className="font-bold text-3xl items-center text-center text-stone-800 pb-8">Log In</h1>
           <div>
             <form id='form' onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-3">
-                <label for='Email' class="text-sm font-medium">Email</label>
+                <label for='Email' class="text-base font-medium">Email</label>
                 <br></br>
                 <input type='text' id='email'
                    className="p-2 w-full h-10 text-sm pl-3 outline rounded-md outline-1 outline-gray-300
@@ -74,7 +55,7 @@ const LogIn = () => {
                 </div>
               </div>
               <div className="mb-1 relative">
-                <label for='Password' className="text-sm font-medium">Password</label>
+                <label for='Password' className="text-base font-medium">Password</label>
                 <br></br>
                 <input type={(isPasswordShown) ? "text" : "password"} 
                 className="p-2 w-full h-10 text-sm pl-3 text-justify outline rounded-md outline-1 outline-gray-300
@@ -97,24 +78,24 @@ const LogIn = () => {
                   focus:outline-none focus:ring-[#f64F59] 
                   cursor-pointer" type='checkbox' id='check-box-1' />
                   <FontAwesomeIcon icon={faCheck} class="h-4 w-4 text-white  text-sm absolute left-0 text-opacity-0 check-1 transition" />
-                  <label for='checkbox' htmlFor='check-box-1' class="text-xs pl-2">Remember me</label>
+                  <label for='checkbox' htmlFor='check-box-1' class="text-sm pl-2">Remember me</label>
                 </div>
                 <div>
-                  <a className="text-[#F64F59] text-xs" href='/forgotpassword'>Forgot Password?</a>
+                  <a className="text-[#F64F59] text-sm" href='/forgotpassword'>Forgot Password?</a>
                 </div>
               </div>
               
-              <button className="bg-[#F64F59] w-full mb-3 mt-7 h-10 rounded-md outline-inherit text-white text-sm py-2">
+              <button className="bg-[#F64F59] w-full mb-3 mt-7 h-10 rounded-md outline-inherit text-white text-base py-2">
               <a href='./dashboard'> Log in</a>
               </button>
             
               <div className="relative">
-                <button className="bg-transparent outline mb-8 w-full h-10 rounded-md text-black outline-1 outline-gray-300 text-sm py-2">
+                <button className="bg-transparent outline mb-8 w-full h-10 rounded-md text-black outline-1 outline-gray-300 text-base py-2">
                   Sign in with Google</button>
-                <img src={GoogleIcon} alt="google Icon" class="w-4 h-4 absolute top-3 left-24 " />
+                <img src={GoogleIcon} alt="google Icon" class="w-5 h-5 absolute top-2.5 left-20 ml-3" />
               </div>
             </form>
-            <p className="text-center text-sm ">Don’t have an account? <a className="text-[#F64F59]" href='/signup'>Sign Up</a></p>
+            <p className="text-center text-base ">Don’t have an account? <a className="text-[#F64F59]" href='/signup'>Sign Up</a></p>
           </div>
         </div>
       </div>
