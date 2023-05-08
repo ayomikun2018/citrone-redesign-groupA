@@ -33,13 +33,13 @@ const ProfileInformation = () => {
 
     }
   return (
-    <div className='' style={{ width: "170vh", height: "170%", marginTop: '95%'}} >
+    <div className='' style={{ width: "140vh", height: "170%"}} >
         <p className=' text-2xl font-semibold whitespace-nowrap  '> Profile Information</p>
         <form 
             onSubmit={handleSubmit}
-            className=' ' style={{ width: "90%", height: "150%"}}
+            className='' style={{ width: "130vh", height: "150%" }}
          >
-            <div className='flex flex-wrap -mx-3 mt-8 mb-6 -space-x-32 font-poppins' style={{ marginRight: "calc(-8rem * var(--tw-space-x-reverse))",}}>
+            <div className=' relative flex -mx-3 mb-6 mt-8 box-border font-poppins space-x-4' >
                 <div className='w-full md:w-1/2 px-3 mb-6 md:mb-0'>
                      <label htmlFor="firstName" 
                      className='block  tracking-wide text-base font-medium mb-2" for="grid-first-name text-black' >
@@ -52,7 +52,7 @@ const ProfileInformation = () => {
                         name='firstName'   //name must be exactly the property name in the array that we saved above
                         onChange={handleInputChange} 
                         value= {profileData.firstName}
-                        className=' mt-3 font-poppins appearance-none block w-full bg-transparent text-sm font-normal border border-gray-400 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-[#fbfbfb]  placeholder-gray-500"  >' style={{  width: "380px", height: "50px"}}
+                        className='    mt-3 font-poppins appearance-none block w-full bg-transparent text-sm font-normal border border-gray-400 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-[#fbfbfb]  placeholder-gray-500"  >' style={{  width: "380px", height: "50px"}}
                     />
                 </div>
                 <div className='w-full md:w-1/2 px-3'>
@@ -67,7 +67,7 @@ const ProfileInformation = () => {
                         name='lastName'
                         onChange={handleInputChange}
                         value= {profileData.lastName}
-                        className=' mt-3 font-poppins appearance-none block w-full bg-transparent text-sm font-normal border border-gray-400 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-[#fbfbfb] placeholder-gray-500" >' style={{  width: "380px", height: "50px"}}
+                        className='   mt-3 font-poppins appearance-none block w-full bg-transparent text-sm font-normal border border-gray-400 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-[#fbfbfb] placeholder-gray-500" >' style={{  width: "380px", height: "50px"}}
                     />
                 </div>
             </div>

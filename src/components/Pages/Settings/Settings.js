@@ -18,6 +18,9 @@ const Settings = ({setSelectedFile}) => {
   
   const [selectedOption, setSelectedOption] = useState("");
 
+  const [isProfileClicked, setIsProfileClicked] = useState(false);  //for the profile picture
+
+
   
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -25,9 +28,9 @@ const Settings = ({setSelectedFile}) => {
     anchors.forEach((a) => {
       if (a.innerHTML === option) {
         a.style.color = "#f64f59";
-        a.style.textDecoration = "underline";
+        a.style.textDecoration = "none";
         a.style.textDecorationColor = "#f64f59";
-        a.style.textDecorationThickness = "4px";
+        a.style.textDecorationThickness = "2px";
         a.style.lineHeight = "2rem";
         a.style.paddingBottom = "10px";
 
@@ -40,13 +43,34 @@ const Settings = ({setSelectedFile}) => {
     });
   };
 
+  const toggleProfile = () => {
+    setIsProfileClicked(!isProfileClicked);
+  };
+
+  const profileClassName = isProfileClicked ? "text-gray-400" : "text-[#f64f59]";
+
   const settingsOptions = [
-    { id: 1, name: "My Profile" },
+    { id: 1, name: <span className={profileClassName} onClick={toggleProfile}>My Profile</span>  },
     { id: 2, name: "Theme & Appearance" },
     { id: 3, name: "Account Settings" },
     { id: 4, name: "Privacy" },
-
   ];
+
+
+
+  // const toggleProfile = () => {
+  //   setIsProfileClicked(true);
+  // };
+
+  // const profileClassName = isProfileClicked ? "text-[#f64f59]" : "text-gray-500";
+  // const otherOptionClassName = isProfileClicked ? "text-gray-500" : "";
+
+  // const settingsOptions = [
+  //   { id: 1, name: <span className={profileClassName} onClick={toggleProfile}>My Profile</span>  },
+  //   { id: 2, name: <span className={otherOptionClassName} onClick={() => setIsProfileClicked(false)}>Theme & Appearance</span> },
+  //   { id: 3, name: <span className={otherOptionClassName} onClick={() => setIsProfileClicked(false)}>Account Settings</span> },
+  //   { id: 4, name: <span className={otherOptionClassName} onClick={() => setIsProfileClicked(false)}>Privacy</span> },
+  // ];
 
   const renderSettingsOptions = () => {
     return settingsOptions.map((option) => (
@@ -66,14 +90,12 @@ const Settings = ({setSelectedFile}) => {
         return <ThemeCheckBoxForm />;
       case "Account Settings":
         return (
-        <span style={{ color: "[#f64f59]"}}>
         <AccountSettingPage />
-        </span>
         );
       case "Privacy":
         return <Privacy />;
       default:
-        return null;
+        return <Profile />;
     }
   };
 
@@ -114,8 +136,8 @@ const Settings = ({setSelectedFile}) => {
   
         <div className=" z-10 flex relative top-10" style={{ left: '6%',}}>
             <div className="">
-              <ul className='flex absolute font-poppins text-base font-normal space-x-8 whitespace-nowrap ' >{renderSettingsOptions()}</ul>
-              <div className=' absolute contact-underline top-10 -left-4 border border-[#A5A5A5]' style={{ width: '90%'}}></div>
+              <ul className='flex absolute font-poppins text-[#A5A5A5] font-normal space-x-8 whitespace-nowrap ' style={{ fontSize: '18px'}} >{renderSettingsOptions()}</ul>
+              <div className=' absolute contact-underline top-10 -left-4 border border-gray-300' style={{ width: '90%'}}></div>
 
             </div>
           

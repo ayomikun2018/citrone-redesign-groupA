@@ -11,14 +11,14 @@ const Profile = () => {
         <p className=' text-2xl font-semibold mt-8' style={{}}> Profile Picture</p>
 
       
-      <div className='bg-white border border-gray-400 rounded-lg flex items-center mt-6' style={{ width: '1040px', height: "230px", }}>
+      <div className='grid space-y-60 bg-white border border-gray-400 rounded-lg items-center mt-6' style={{ width: '1040px', height: "230px", }}>
         <div className=''>
           <ProfilePictureForm />
          
 
         </div>
-        <div>
-        <ProfileInformation />
+        <div className=''>
+         <ProfileInformation />
 
         </div>
         
