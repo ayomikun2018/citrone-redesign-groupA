@@ -11,7 +11,7 @@ const ProfileCheckboxes = ({ name, options, selectedOptions, onChange }) => {
 
   return (
 
-    <div className=' checkboxes-container absolute grid font-poppins' style={{top: '90%', left: '8%'}}>
+    <div className=' checkboxes-container absolute grid font-poppins' style={{top: '100%', left: '8%'}}>
       <span className=' text-2xl font-semibold font-poppins '>Notification Preference </span>
       <div className='grid ml-3 '>
 
