@@ -20,6 +20,9 @@ import Settings from './components/Pages/Settings/Settings'
 import LightMode from './components/Pages/LightMode/LightMode'
 import Message from './components/Pages/Message/Message'
 import Logout from './components/Pages/Logout/Logout'
+import CoursesContent from "./components/Pages/Courses/CourseContent";
+import CoursesList from "./components/Pages/Courses/CourseList";
+import RecordedLiveSession from "./components/Pages/Courses/RecordedLiveSessions";
 
 function App() {
   return (
@@ -40,6 +43,9 @@ function App() {
    <Route exact path= '/taskprogress' element = {<TaskProgress/>}/>
    <Route exact path= '/assignment' element = {<Assignment/>}/>
    <Route exact path= '/assignmentgrade' element = {<AssignmentGrade/>}/>
+   <Route exact path= '/coursecontent' element = {<CoursesContent/>}/>
+   <Route exact path= '/courselist' element = {<CoursesList/>}/>
+   <Route exact path= '/recordedlivesessions' element = {<RecordedLiveSession/>}/>
 
 
     {/* Sidebar pages */}

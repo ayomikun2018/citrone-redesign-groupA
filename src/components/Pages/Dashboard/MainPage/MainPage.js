@@ -6,7 +6,6 @@ import CommunityChat from './CommunityChat'
 
 
 const MainPage = () => {
-
   return (
     <React.Fragment >
       <div className='flex space-x-96'>
@@ -35,8 +34,8 @@ const MainPage = () => {
               <CommunityChat /> 
         </div>
       </div>
-        
-     
+
+  
 
     </React.Fragment>
   )

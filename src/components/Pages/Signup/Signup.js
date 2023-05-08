@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from './Assets/citrone logo 1.svg'
+import Logo from './Assets/citrone logo 1.png'
 import GoogleIcon from './Assets/logos_google-icon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
@@ -27,38 +27,47 @@ const SignUp = () => {
   }
 
     //Hooks for integrating API for backend server
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmpassword, setConfirmPassword] = useState("");
-    const change = (e) => {
-        setEmail(e.target.value);
-         e.preventDefault();
-    }
 
   
-
-//   const ProceedLogin = (e) => {
-//      e.preventDefault();
-//      fetch ("https://stutern-citrone-app.onrender.com/api/v1/users/register"+email).then((res) => {
-//           return res.json();
-//      }).then((resp) =>{
-//       //console.log(resp)
-//   })
-// }
+const [error, setError] = useState('')
+const postAnyData = async () => {
+    try {
+      const response = await fetch('https://stutern-citrone-app.onrender.com/api/v1/users/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: Event.target.email.value,
+          password: Event.target.password.value, 
+          confirmPassword: Event.target.confirmPassword.value
+        })
+      });
+      const data = await response.json();
+    
+    } catch (error) {
+      setError(error);
+    } finally {
+      return false;
+    }
+  };
 
 
 return (
     <div >
-        <img src={Logo} className="pl-10 pt-10  w-56 h-32 " alt="Citrone Logo"></img>
+         <div className='flex'>
+         <img src={Logo} className="pl-10 pt-10 w-32 h-32" alt="Logo" />
+        <h1 class="pt-14" >Citrone</h1>
+      </div>
         <div className="h-full flex items-center justify-center ">
             <div className="h-full pt-20">
 
                 <h1 className="font-bold text-3xl items-center text-center text-stone-800 pb-8 font-poppins">Sign Up</h1>
 
                 <div>
-                    <form id='form' onSubmit={handleSubmit(onSubmit && setModal)} >
-                        <div className="NameclassNamemb-3 font-poppins">
-                            <label htmlFor='email' className="text-sm font-normal">Email</label>
+                    <form id='form' onSubmit={handleSubmit(onSubmit && postAnyData)} >
+                        <div className="NameclassNamemb-3 font-poppins mb-3">
+                            <label htmlFor='email' className="text-base font-medium">Email</label>
                             <br></br>
                             <input type='text' id='emailaddress' className="p-2 w-full h-10 text-sm pl-3 outline rounded-md 
                                 focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59]
@@ -70,8 +79,8 @@ return (
                                 {errors.email?.type === "pattern" && "Entered email is in wrong format"}
                             </div>
                         </div>
-                        <div className="relative font-poppins  mb-3 ">
-                            <label htmlFor='password' className="text-sm">Password</label>
+                        <div className="relative font-poppins mb-3 ">
+                            <label htmlFor='password' className="text-base font-medium">Password</label>
                             <br></br>
                             <input type={(isPasswordShown) ? "text" : "password"} id='passwordinput' className="p-2 w-full text-sm pl-3 h-10 outline rounded-md outline-1
                                  focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59]
@@ -90,7 +99,7 @@ return (
                             </div>
                         </div>
                         <div className="relative font-poppins">
-                            <label htmlFor='password' className="text-sm font-normal">Confirm Password</label>
+                            <label htmlFor='password' className="text-base font-medium">Confirm Password</label>
                             <br></br>
                             <input type={(isPasswordShown) ? "text" : "password"} id='password2' className="p-2 w-full h-10 text-sm pl-3 outline rounded-md 
                                  focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59] outline-1 outline-gray-300" placeholder="At least 8 characters" {...register("cpassword", {
@@ -109,15 +118,15 @@ return (
                                 {errors.cpassword?.type === "validate" && "passwords don't match"}
                             </div>
                         </div>
-                        <button type='submit' className="bg-[#F64F59] w-full mb-3 mt-7 h-10 rounded-md outline-inherit text-white text-sm py-2 font-poppins">Sign Up</button>
+                        <button type='submit' className="bg-[#F64F59] w-full mb-3 mt-7 h-10 rounded-md outline-inherit text-white text-base py-2 font-poppins">Sign Up</button>
                         <div className="relative">
-                            <button className="bg-transparent outline mb-5 w-full h-10 rounded-md text-black outline-1 outline-gray-300 text-sm py-2 font-poppins">Sign Up with Google</button>
-                            <img src={GoogleIcon} alt="google Icon" className="w-5 h-5 absolute top-2.5 left-24" />
+                            <button className="bg-transparent outline mb-5 w-full h-10 rounded-md text-black outline-1 outline-gray-300 text-base py-2 font-poppins">Sign Up with Google</button>
+                            <img src={GoogleIcon} alt="google Icon" className="w-5 h-5 absolute top-2.5 left-28" />
                         </div>
                     </form>
-                    <p className="text-sm font-poppins w-full">By creating an account, you agree to our <a className="text-[#F64F59]" href='#'>Terms of Service</a></p>
-                    <p className="text-sm font-poppins pb-6 "> and <a className="text-[#F64F59]" href='#'>Privacy Policy</a></p>
-                    <p className="text-center text-sm font-poppins">Already have an account? <a className="text-[#F64F59]" href='/login'>Log In</a></p>
+                    <p className="text-base font-poppins w-full">By creating an account, you agree to our <a className="text-[#F64F59]" href='#'>Terms of Service</a></p>
+                    <p className="text-base font-poppins pb-6 "> and <a className="text-[#F64F59]" href='#'>Privacy Policy</a></p>
+                    <p className="text-center text-base font-poppins">Already have an account? <a className="text-[#F64F59]" href='/login'>Log In</a></p>
                 </div>
 
             </div>
