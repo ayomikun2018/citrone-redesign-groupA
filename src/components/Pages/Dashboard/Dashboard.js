@@ -24,13 +24,11 @@ const Dashboard = (props) => {
 
   return (
     <>
-    <div className='relative w-full bg-[#fbfbfb]' style={{ }} >
+    <div className='relative w-full bg-[#fbfbfb]' >
        <Navbar />
-       <div className=''>
         <Sidebar />
         <MainPage />
-       </div>
-   
+
       <div className=''>
         <AddEventButton showAddEventModal={toggleModal}/>
         {showAddEventModal && (
