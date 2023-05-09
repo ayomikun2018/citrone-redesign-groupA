@@ -10,7 +10,8 @@ module.exports = {
         'chat-color' : '#f1f1f1' ,
         'event-color' : '#fff1f1',
         'event-row' : '#F6F6F6',
-        'logout-text' : '#A5A5A5;'
+        'logout-text' : '#A5A5A5',
+        'black-text' : '#1A1A1A',
 
       
       },
