@@ -39,10 +39,12 @@ const ProfileInformation = () => {
             onSubmit={handleSubmit}
             className='' style={{ width: "130vh", height: "150%" }}
          >
-            <div className=' relative flex -mx-3 mb-6 mt-8 box-border font-poppins -space-x-14' >
-                <div className='w-full md:w-1/2 px-3 mb-6 md:mb-0'>
+
+            <div className=' relative flex -mx-3 mb-6 mt-8 box-border font-poppins space-x-4' >
+                <div className='w-full md:w-1/2 px-3 mb-6 md:mb-0 ' style={{  width: "415px"}}>
                      <label htmlFor="firstName" 
-                     className='block tracking-wide text-base font-medium mb-2" for="grid-first-name text-black' >
+                     className='block  tracking-wide text-base font-medium mb-2" for="grid-first-name text-black  '>
+
                         First name
                     </label>
                     <input
@@ -67,7 +69,7 @@ const ProfileInformation = () => {
                         name='lastName'
                         onChange={handleInputChange}
                         value= {profileData.lastName}
-                        className='   mt-3 font-poppins appearance-none block w-full bg-transparent text-sm font-normal border border-gray-400 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-[#fbfbfb] placeholder-gray-500" >' style={{  width: "380px", height: "50px"}}
+                        className='   mt-3 font-poppins appearance-none block w-full bg-transparent text-sm font-normal border border-gray-400 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-[#fbfbfb] placeholder-gray-500 " >' style={{  width: "380px", height: "50px"}}
                     />
                 </div>
             </div>

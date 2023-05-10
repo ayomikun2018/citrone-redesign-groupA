@@ -23,7 +23,7 @@ const ThemeCheckbox = ({ name, options, selectedOptions, onChange }) => {
             value={option}
             checked={selectedOptions.includes(option)}
             onChange={handleCheckboxChange}
-            className=' -mt-6 ml-10 -mr-5 appearance-none border-2 border-[#A5A5A5] rounded-full w-5 h-5 checked:bg-[#A5A5A5] checked:-mt-6 checked:border-transparent focus:ring-2 focus:ring-[#A5A5A5]'
+            className=' -mt-6 ml-10 -mr-5 appearance-none border-2 border-[#F64F59 rounded-full w-5 h-5 checked:bg-[#F64F59] checked:-mt-6 checked:border-transparent focus:ring-2 focus:ring-[#A5A5A5]'
           />
           <p className=' font-poppins text-base font-medium -mt-6'>{option}</p>
         </label>
