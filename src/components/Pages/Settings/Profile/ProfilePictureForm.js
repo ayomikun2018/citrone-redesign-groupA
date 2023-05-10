@@ -95,7 +95,7 @@ function ProfileForm() {
       
 
      {uploadStatus === 'success' && (
-        <div className="modal fixed inset-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm flex items-center justify-center" style={{left: '70rem'}}>
+        <div className="modal fixed z-50 inset-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm flex items-center justify-center" style={{left: '70rem'}}>
           <div className="modal-content bg-white rounded shadow p-6">
             <h2 className=" z-50 text-2xl font-bold mb-4 font-poppins ">Profile Picture Uploaded Successfully</h2>
             <button onClick={handleCloseModal} className="bg-red-400 hover:bg-[#f64f59] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Close</button>
