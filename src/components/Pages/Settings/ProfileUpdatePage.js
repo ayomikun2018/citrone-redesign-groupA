@@ -32,18 +32,18 @@ const ProfileUpdatePage = () => {
             </div>
      
         </div>
-        <div className=" grid -space-y-80">
-            <div className= " w-full h-screen inline-block mt-44 " style={{ marginLeft: "18rem"}}>
-                <img src={ProfileUpdateBanner}  alt="" className=""  style={{width: "1200px", height: "268px" }}/>
-                <img src={ProfileUpdateUpload}  alt="" className=" -mt-44"  style={{width: "250px", height: "248px", marginLeft: "35px"}}/>
+        <div className="">
+            <div className= " w-full h-screen inline-block mt-44 " style={{ marginLeft: "16rem"}}>
+                <img src={ProfileUpdateBanner}  alt="" className=" ml-12"  style={{width: "1200px", height: "268px" }}/>
+                <img src={ProfileUpdateUpload}  alt="" className=" -mt-44"  style={{width: "250px", height: "248px", marginLeft: "83px"}}/>
                 
                 <Link to="/settings">
-                    <div className='relative w-10 h-10 rounded-full bg-[#f64f59] -mt-12 flex items-center justify-center  cursor-pointer' style={{ marginLeft: "210px"}}>
+                    <div className='relative w-10 h-10 rounded-full bg-[#f64f59] -mt-12 flex items-center justify-center  cursor-pointer' style={{ marginLeft: "260px"}}>
                         <img src={editVector} alt='' className='w-4 h-4'/>
                     </div> 
                 </Link>
             </div>
-            <div className='' style={{ marginTop: "-22rem", marginLeft: "21rem"}}>
+            <div className='' style={{ marginTop: "-23rem", marginLeft: "21rem"}}>
                 <div className=" flex space-x-3">
                     <h2 className=' font-poppins text-2xl font-semibold p-1' style={{ fontSize: "26px"}}>Jane Micheal</h2>
                     <span className=' font-poppins text-base font-normal p-1 mt-1'>(She/Her)</span>

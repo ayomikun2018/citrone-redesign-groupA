@@ -18,6 +18,7 @@ const Navbar = () => {
       <div className="flex ml-8 mt-2">
 
         {/* Left chevron icon */}
+        <img src={leftChevron} alt= 'left-chevron' className='h-6 w-6 fill-current text-gray-500 md:hidden mr-4' />
         {/* HamburgerMenu */}
         <button onClick={toggleMenu} className="md:hidden p-4">
           <svg className="h-6 w-6 fill-current text-gray-500" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -28,8 +29,6 @@ const Navbar = () => {
             )}
           </svg>
         </button>
-        <img src={leftChevron} alt= 'left-chevron' className='h-6 w-6 fill-current text-gray-500 md:hidden mr-4' />
-
  
         <div className="flex items-center md:mx-auto">
           <img src={CitroneLogo} alt="citrone_logo" className="mr-2 w-12 h-12 md:w-16 md:h-16" />
