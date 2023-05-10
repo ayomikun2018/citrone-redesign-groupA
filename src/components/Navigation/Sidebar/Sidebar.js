@@ -6,7 +6,7 @@ import "./Sidebar.css"
 import LogoutModal from '../../Pages/Logout/Logout'
 
 
-const Sidebar = () => {
+const Sidebar = ({ children }) => {
     const [topSidebar, setTopSidebar] = useState(TopData_)
     const [bottomSidebar, setBottomSidebar] = useState(BottomData_)
 
@@ -22,14 +22,18 @@ const Sidebar = () => {
         setShowLogoutModal(true);
       }
 
-      
-
-
       const handleLogoutModalClose = () => {
         // Handle close event for Logout modal
         setShowLogoutModal(false);
         window.location.pathname = "/dashboard";
       };
+
+
+      const [isOpen, setIsOpen] = useState(false);
+      
+      const toggle = () => {
+        setIsOpen(!isOpen)
+      }
 
   return (
     <React.Fragment>
@@ -40,7 +44,7 @@ const Sidebar = () => {
                 topSidebar.map((item, index) => {
                 return (
                     <div 
-                      className='flex items-center gap-3 hover:bg-red-200 hover:border-r-8 border-[#f64f59] hover:rounded-l-lg sidebar-row sidebar-row show'
+                      className='flex items-center gap-3 hover:bg-red-200 hover:border-r-8 border-[#f64f59] transition duration-500 sidebar-row sidebar-row show'
                       id={window.location.pathname === item.link ? "active" : ""}
                       key={index}
                       onClick={() => {window.location.pathname = item.link}}
@@ -58,7 +62,7 @@ const Sidebar = () => {
           bottomSidebar.map((element, value) => {
             return (
               <div 
-                className='flex items-center gap-3 hover:bg-red-200 hover:border-r-8 border-[#f64f59] hover:rounded-l-lg sidebar-row sidebar-row show'
+                className='flex items-center gap-3 hover:bg-red-200 hover:border-r-8 border-[#f64f59] transition duration-700 sidebar-row sidebar-row show'
                 id={window.location.pathname === element.link ? "active" : ""}
                 key={value}
                 onClick={element.title === "Logout" ? () => handleLogoutClick(element.link) : () => window.location.pathname = element.link}
@@ -69,7 +73,7 @@ const Sidebar = () => {
             )
           })
         }
-
+            {/* Logout Modal */}
             {showLogoutModal && (
             <LogoutModal
             handleLogoutModalClose={handleLogoutModalClose}

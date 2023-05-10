@@ -48,6 +48,7 @@ const Settings = ({setSelectedFile}) => {
   };
 
   const profileClassName = isProfileClicked ? "text-gray-400" : "text-[#f64f59]";
+  
 
   const settingsOptions = [
     { id: 1, name: <span className={profileClassName} onClick={toggleProfile}>My Profile</span>  },

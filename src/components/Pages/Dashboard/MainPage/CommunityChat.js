@@ -18,13 +18,13 @@ const CommunityChat = () => {
   return (
     <React.Fragment>
       {/* has some css in MainPage.css */}
-      <div className=' community-chat1list-item min-w-max border-l bg-transparent border-slate-300 font-poppins' style={{ marginTop: '6.5rem' }}>
-        <div className=' announce-1 z-10 relative top-30 flex bg-[#fbfbfb] shadow-md p-1 rounded-xl' style={{ marginLeft: '3rem' }}>
+      <div className=' community-chat1list-item min-w-max border-l border-slate-300 font-poppins' style={{ width: '23.5rem', marginTop: '9rem' }}>
+        <div className=' announce-1 z-10 sticky top-20 flex bg-[#fbfbfb] shadow-md p-1 rounded-xl' style={{ marginLeft: '2rem' }}>
           <img src={Ellipse} alt={Ellipse} className='w-16 h-16 mt-0 p-1'/> 
           <p className='text-sm p-1 mt-4 ml-3 italic whitespace-nowrap font-poppins'>Announce something to your class</p>
           <div className='absolute w-24 gap-4 bottom-1 flex left-52'>
             <p className='text-xs p-1 mt-14 ml-20 font-semi-bold'>Cancel</p>
-            <button className=' w-28 h-7  p-3 bg-[#f64f59] text-white text-xs rounded-lg mt-14 flex items-center space-x-6 gap-6'>Post</button>
+            <button className='w-28 h-7  p-3 bg-[#f64f59] text-white text-xs rounded-lg mt-14 flex items-center space-x-6 gap-6'>Post</button>
           </div>
         </div>
 
@@ -33,12 +33,12 @@ const CommunityChat = () => {
           chats.map((element, value) => {
             return (
               <div 
-              className='announce-list grid relative h-52 ml-12 mt-6 mr-12  bg-[#fbfbfb] p-1 rounded-xl border border-slate-300 drop-shadow-md '
+              className='announce-list grid relative h-52 ml-8 mt-6 mr-12  bg-[#fbfbfb] p-1 rounded-xl border border-slate-300 drop-shadow-md '
               key={value}
               onClick={() => {}}
               >
                 <div className="flex">
-                  <img src={element.image} alt={element.image} className='w-14 h-14 ml-2 mt-0  p-1'/>
+                  <img src={element.image} alt={element.image} className='w-14 h-14 ml-2 mt-0 p-1'/>
                   <div className='ml-8 mt-1'>
                     <p className=' text-sm font-semibold whitespace-nowrap p-1 font-poppins'>{element.name}</p>
                     <p className='text-sm font-normal whitespace-nowrap leading-1 -mt-1 p-1'>{element.date}</p>

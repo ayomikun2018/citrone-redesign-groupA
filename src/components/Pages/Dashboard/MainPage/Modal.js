@@ -23,7 +23,7 @@ const ModalItem = ({ image, percent, performance, comment, one, two, submitPerce
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="relative z-0 w-12 h-12 mt-4 ml-10 bg-[#f64f59] rounded-full flex items-center justify-center shadow-sm">
+        <div className="relative z-10 w-12 h-12 mt-4 ml-10 bg-[#f64f59] rounded-full flex items-center justify-center shadow-sm">
           <div className="w-10 h-10 flex justify-center items-center rounded-full bg-[#fbfbfb] shadow-inner">
             <p className="text-xs flex items-center">{percent}</p>
           </div>
