@@ -162,7 +162,7 @@ const Calendar = () => {
           {/* <Link to= "/dashboard"> */}
             <button  
               onClick={props.showAddEventModal} 
-              className=" w-fit add-event-btn flex h-16 justify-center items-center bg-[#f64f59] text-white pl-8  text-sm text-center hover:bg-red-500 rounded-xl align-center"
+              className=" w-80 add-event-btn flex h-16 justify-center items-center bg-[#f64f59] text-white pl-8 pr-8  text-sm text-center hover:bg-red-500 rounded-xl align-center"
               style={{ }}
             > Add Event
             </button>
