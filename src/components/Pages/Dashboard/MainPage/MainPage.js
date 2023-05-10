@@ -100,7 +100,7 @@ const MainPage = () => {
         </div>
 
         {/* second div */}
-          <div className='relative w-96 p-4 mt-0 flex-1 ml-6'>
+          <div className='relative w-96 p-4 mt-0 flex-1 ml-4'>
             <CommunityChat /> 
           </div>
 
