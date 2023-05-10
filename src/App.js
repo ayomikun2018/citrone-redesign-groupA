@@ -23,6 +23,9 @@ import Logout from './components/Pages/Logout/Logout'
 import CoursesContent from "./components/Pages/Courses/CourseContent";
 import CoursesList from "./components/Pages/Courses/CourseList";
 import RecordedLiveSession from "./components/Pages/Courses/RecordedLiveSessions";
+import CoursesContent from "./components/Pages/Courses/CourseContent";
+import CoursesList from "./components/Pages/Courses/CourseList";
+import RecordedLiveSession from "./components/Pages/Courses/RecordedLiveSessions";
 import Profile from './components/Pages/Settings/Profile/Profile'
 import ProfileUpdatePage from "./components/Pages/Settings/ProfileUpdatePage"
 import CheckModal from "./components/Pages/Assignments/CheckModal";
@@ -53,7 +56,6 @@ function App() {
    <Route exact path= '/courselist' element = {<CoursesList/>}/>
    <Route exact path= '/recordedlivesessions' element = {<RecordedLiveSession/>}/>
    <Route exact path= '/profile-update-page' element = {<ProfileUpdatePage/>}/>
-
 
 
 
