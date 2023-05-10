@@ -8,10 +8,12 @@ const genderList = [
   "Others"
 ];
 
-function GenderDropdownList() {
+function GenderDropdownList(props, profileData, handleChange) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Choose your Gender");
 
+
+  console.log(props)
   const handleDropdownClick = () => {
     setIsOpen(!isOpen);
   };
@@ -35,6 +37,7 @@ function GenderDropdownList() {
           type="text"
           value={selectedItem}
           readOnly
+          onChange={handleChange}
           className=' mt-3 font-poppins appearance-none block w-full bg-transparent text-sm font-normal text-gray-400  border border-gray-400 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-[#fbfbfb]">' style={{  width: "380px", height: "50px"}}
           />
         <img
@@ -47,11 +50,11 @@ function GenderDropdownList() {
         />
       </div>
       {isOpen && (
-        <ul className=" font-poppins absolute top-full py-2 mt-1 bg-white rounded-md shadow-md"  style={{  width: "380px", height: "186px"}}>
+        <ul className=" z-50 font-poppins absolute top-full py-2 mt-1 bg-white rounded-md shadow-md"  style={{  width: "380px", height: "186px"}}>
           {genderList.map((item) => (
             <li
               key={item}
-              className="px-6 py-2 text-gray-400 cursor-pointer"
+              className="px-6 py-2 text-gray-500 cursor-pointer"
               onClick={() => handleItemClick(item)}
             >
               {item}

@@ -45,7 +45,7 @@ function ProfileForm() {
 
   return (
     <React.Fragment>
-    <form onSubmit={handleFormSubmit} className="max-w-md mx-auto mt-8">
+    <form onSubmit={handleFormSubmit} className="max-w-md mx-auto mt-8 ">
       <div></div>
       <div className=" absolute flex left-44 top-32">
         {selectedFile ? (
@@ -97,8 +97,8 @@ function ProfileForm() {
      {uploadStatus === 'success' && (
         <div className="modal fixed top-20 w-full h-full bg-gray-700 bg-opacity-50 flex items-center justify-center" style={{left: '70rem'}}>
           <div className="modal-content bg-white rounded shadow p-6">
-            <h2 className="text-2xl font-bold mb-4">Profile Picture Uploaded Successfully</h2>
-            <button onClick={handleCloseModal} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Close</button>
+            <h2 className="text-2xl font-bold mb-4 ">Profile Picture Uploaded Successfully</h2>
+            <button onClick={handleCloseModal} className="bg-red-400 hover:bg-[#f64f59] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Close</button>
           </div>
         </div>
       )}

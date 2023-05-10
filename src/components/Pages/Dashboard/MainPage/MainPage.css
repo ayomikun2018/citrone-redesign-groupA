@@ -1,44 +1,23 @@
-*{
-    /*       <div className='absolute w-full min-w-100vw h-full z-auto left-14 bottom-9 bg-#E5E5E5 '>
- */
-}
+
 .dashboard-body-container{
-    width: 100%;
+    /* width:60%;   
     height:300vh;
     z-index: inherit;
-    position: absolute;
+    position: absolute; */
     top: 12%;
     left: 0%;
     bottom: 20%;
-    background-color: #f1f1f1;
-}
-/* .body-rectangle1{
-    width: 664px;
-    height: 226px;
-    display: flex;
-
-} */
-/* Module session */
-.module1{
-    display:flex;
-    flex-wrap: wrap;
-    width: 663px;
-    height: 246px; 
-    margin-left:244px;
-    margin-top: -50px;
-    gap: 42px;
-    
+    background-color: #fbfbfb;
 }
 
-/* community Chat */
+
 /* relative   list-item w-3/4 min-w-max h-auto border-l bg-transparent border-slate-300 font-poppins  */
 
 .community-chat1{
-    position: relative;
+  
     width: 450px;
     height: auto;
-    top:14%; 
-    left:40rem;
+    
 }
 .announce-1{
     width: 417px;

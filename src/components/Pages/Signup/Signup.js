@@ -7,6 +7,9 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 import ActivationModal from './Modals/ActivationModal'
 import { useState } from "react"
 import { useForm } from 'react-hook-form'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const SignUp = () => {
     // useState for modal
@@ -17,8 +20,8 @@ const SignUp = () => {
         e.preventDefault();
     }
     //Hooks for form validation
-    const { register, getValues, formState: { errors }, handleSubmit} = useForm();
-    const onSubmit = (data) => console.log(data)
+    // const { register, getValues, formState: { errors }, handleSubmit} = useForm();
+    // const onSubmit = (data) => console.log(data)
 
 //show/hide passwords
     const [isPasswordShown, setIsPasswordShown] = useState(false)
@@ -27,30 +30,31 @@ const SignUp = () => {
   }
 
     //Hooks for integrating API for backend server
+const[mail, setmail]= useState("");
+const[pass, setPass]= useState("");
+const[confirmPass, setConfirmPass]= useState("");
 
-  
-const [error, setError] = useState('')
-const postAnyData = async () => {
-    try {
-      const response = await fetch('https://stutern-citrone-app.onrender.com/api/v1/users/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          email: Event.target.email.value,
-          password: Event.target.password.value, 
-          confirmPassword: Event.target.confirmPassword.value
+
+const postAnyData = async (e) => {
+    e.preventDefault()
+       let data = {mail, pass, confirmPass}
+       //console.log(data)
+    fetch('https://stutern-citrone-app.onrender.com/api/v1/users/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        }).then((res)=>{
+            toast.success("Registerd Successfully")
+        }).then((err) =>{
+            toast.error("Failed:")
         })
-      });
-      const data = await response.json();
-    
-    } catch (error) {
-      setError(error);
-    } finally {
-      return false;
-    }
-  };
+
+
+};
+  
+
 
 
 return (
@@ -65,59 +69,63 @@ return (
                 <h1 className="font-bold text-3xl items-center text-center text-stone-800 pb-8 font-poppins">Sign Up</h1>
 
                 <div>
-                    <form id='form' onSubmit={handleSubmit(onSubmit && postAnyData)} >
+                    <form id='form' onSubmit={postAnyData} >
                         <div className="NameclassNamemb-3 font-poppins mb-3">
                             <label htmlFor='email' className="text-base font-medium">Email</label>
                             <br></br>
                             <input type='text' id='emailaddress' className="p-2 w-full h-10 text-sm pl-3 outline rounded-md 
                                 focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59]
-                                outline-1 outline-gray-300" placeholder="Email@email.com" {...register("email", {
-                                required: true, pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i,
-                            })}/>
+                                outline-1 outline-gray-300" placeholder="Email@email.com" value={mail} onChange={e=>setmail(e.target.value)} />
+                                {/* // {...register("email", {
+                                // required: true, pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i,
+                            })} */}
                            
-                            <div className='text-red-400 text-xs'>{errors.email?.type === "required" && "Email is required"}
+                            {/* <div className='text-red-400 text-xs'>{errors.email?.type === "required" && "Email is required"}
                                 {errors.email?.type === "pattern" && "Entered email is in wrong format"}
-                            </div>
+                            </div> */}
                         </div>
                         <div className="relative font-poppins mb-3 ">
                             <label htmlFor='password' className="text-base font-medium">Password</label>
                             <br></br>
-                            <input type={(isPasswordShown) ? "text" : "password"} id='passwordinput' className="p-2 w-full text-sm pl-3 h-10 outline rounded-md outline-1
+                            <input type={(isPasswordShown) ? "text" : "password"} id='passwordinput' value={pass} onChange={e=>setPass(e.target.value)}className="p-2 w-full text-sm pl-3 h-10 outline rounded-md outline-1
                                  focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59]
-                                 outline-gray-300" placeholder="At least 8 characters" {...register("password", {
-                                required: true, minLength: 8, maxLength: 12,
-                            })} />
+                                 outline-gray-300" placeholder="At least 8 characters"  />
+                                {/* //   {...register("password", { */}
+                                {/* // required: true, minLength: 8, maxLength: 12, */}
+                           
                           <div className="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9 " >
                                 {
                                     (isPasswordShown === false) ? <FontAwesomeIcon icon={faEyeSlash} onClick={togglePasswordVisiblility} /> :
                                         <FontAwesomeIcon icon={faEye} onClick={togglePasswordVisiblility} />
                                 }
                             </div>
-                            <div className='text-red-400 text-xs'>{errors.password?.type === "required" && "password is required"}{errors.password?.type === "minLength" && "Entered password is less than 8 characters"}
+                            {/* <div className='text-red-400 text-xs'>{errors.password?.type === "required" && "password is required"}{errors.password?.type === "minLength" && "Entered password is less than 8 characters"}
                                 {errors.password?.type === "maxLength" && "Entered password is more than 12 characters"}
 
-                            </div>
+                            </div> */}
                         </div>
                         <div className="relative font-poppins">
                             <label htmlFor='password' className="text-base font-medium">Confirm Password</label>
                             <br></br>
-                            <input type={(isPasswordShown) ? "text" : "password"} id='password2' className="p-2 w-full h-10 text-sm pl-3 outline rounded-md 
-                                 focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59] outline-1 outline-gray-300" placeholder="At least 8 characters" {...register("cpassword", {
-                                required: true, validate: (val) => {
-                                    const { password } = getValues();
-                                    return password === val
-                                }
-                            })} />
+                            <input type={(isPasswordShown) ? "text" : "password"} id='password2'value={confirmPass} onChange={e=>setConfirmPass(e.target.value)}className="p-2 w-full h-10 text-sm pl-3 outline rounded-md 
+                                 focus:outline-none focus:border-[#F64F59] focus:ring-1 focus:ring-[#F64F59] outline-1 outline-gray-300" placeholder="At least 8 characters" />
+                            {/* //     //  {...register("cpassword", {
+                            //     // required: true, validate: (val) => {
+                            //     //     const { password } = getValues();
+                            //     //     return password === val
+                            //     // }
+                            // })} */}
                             <div className="h-4 w-4 text-gray-400 text-sm absolute right-6 top-9 " >
                                 {
                                     (isPasswordShown === false) ? <FontAwesomeIcon icon={faEyeSlash} onClick={togglePasswordVisiblility} /> :
                                         <FontAwesomeIcon icon={faEye} onClick={togglePasswordVisiblility} />
                                 }
                             </div>
-                            <div className='text-red-400 text-xs'>{errors.cpassword?.type === "required" && "password is required"}
-                                {errors.cpassword?.type === "validate" && "passwords don't match"}
-                            </div>
                         </div>
+                            {/* <div className='text-red-400 text-xs'>{errors.cpassword?.type === "required" && "password is required"}
+                                {errors.cpassword?.type === "validate" && "passwords don't match"}
+                            </div> */}
+                       
                         <button type='submit' className="bg-[#F64F59] w-full mb-3 mt-7 h-10 rounded-md outline-inherit text-white text-base py-2 font-poppins">Sign Up</button>
                         <div className="relative">
                             <button className="bg-transparent outline mb-5 w-full h-10 rounded-md text-black outline-1 outline-gray-300 text-base py-2 font-poppins">Sign Up with Google</button>

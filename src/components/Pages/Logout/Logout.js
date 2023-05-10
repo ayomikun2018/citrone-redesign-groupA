@@ -22,7 +22,6 @@ function LogoutModal({ handleLogoutModalClose, showLogoutModal, setShowLogoutMod
                 </button>
                 <button
                   className=" font-poppins  w-36 h-14  flex items-center justify-center rounded-xl border border-gray-300 shadow p-2 bg-[#f64f59] text-base font-normal text-white focus:outline-none focus:ring-2 "
-                  // onClick={() => setShowLogoutModal(false)}
                   onClick={() => window.location.pathname = "/login"}
                 >
                   Yes

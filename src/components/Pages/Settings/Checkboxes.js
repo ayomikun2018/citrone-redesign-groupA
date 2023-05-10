@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const Checkboxes = ({ name, options, selectedOptions, onChange }) => {
+const ProfileCheckboxes = ({ name, options, selectedOptions, onChange }) => {
 
   const handleCheckboxChange = (event) => {
     const option = event.target.value;
@@ -33,4 +33,4 @@ const Checkboxes = ({ name, options, selectedOptions, onChange }) => {
   );
 };
 
-export default Checkboxes;
+export default ProfileCheckboxes;
