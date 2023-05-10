@@ -19,7 +19,7 @@ const CommunityChat = () => {
     <React.Fragment>
       {/* has some css in MainPage.css */}
       <div className=' community-chat1list-item min-w-max border-l border-slate-300 font-poppins' style={{ width: '23.5rem', marginTop: '9rem' }}>
-        <div className=' announce-1 z-10 sticky top-20 flex bg-[#fbfbfb] shadow-md p-1 rounded-xl' style={{ marginLeft: '3rem' }}>
+        <div className=' announce-1 z-10 sticky top-20 flex bg-[#fbfbfb] shadow-md p-1 rounded-xl' style={{ marginLeft: '2rem' }}>
           <img src={Ellipse} alt={Ellipse} className='w-16 h-16 mt-0 p-1'/> 
           <p className='text-sm p-1 mt-4 ml-3 italic whitespace-nowrap font-poppins'>Announce something to your class</p>
           <div className='absolute w-24 gap-4 bottom-1 flex left-52'>
@@ -33,7 +33,7 @@ const CommunityChat = () => {
           chats.map((element, value) => {
             return (
               <div 
-              className='announce-list grid relative h-52 ml-12 mt-6 mr-12  bg-[#fbfbfb] p-1 rounded-xl border border-slate-300 drop-shadow-md '
+              className='announce-list grid relative h-52 ml-8 mt-6 mr-12  bg-[#fbfbfb] p-1 rounded-xl border border-slate-300 drop-shadow-md '
               key={value}
               onClick={() => {}}
               >
