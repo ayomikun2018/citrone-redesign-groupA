@@ -12,10 +12,9 @@ const ProfileCheckboxes = ({ name, options, selectedOptions, onChange }) => {
   return (
     // <div style={{  right: "1rem", }}>
 
-    <div className=' checkboxes-container grid font-poppins' style={{ position: "absolute", bottom: "4rem",top: '94%', left: '8%', width: "fit-content"}}>
+    <div className=' checkboxes-container grid font-poppins absolute' style={{ top: "40rem", left: '9%', width: "fit-content"}}>
       <span className=' text-2xl font-semibold font-poppins '>Notification Preference </span>
       <div className='grid ml-3 '>
-
       {options.map((option) => (
         <label key={option} className="font-poppins text-base font-medium mt-6  inline-flex items-center space-x-8">
           <input

@@ -19,7 +19,7 @@ const CheckBoxForm = () => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit} className= ' mt-24'
+    <form onSubmit={handleFormSubmit} className= '' style={{ marginTop: '50%'}}
     >
 
       <Checkboxes

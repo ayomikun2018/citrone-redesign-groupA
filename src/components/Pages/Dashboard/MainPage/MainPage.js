@@ -69,7 +69,7 @@ const MainPage = () => {
   return (
     <React.Fragment >
 
-      <div className=' flex flex-row  left-10 p-4 mt-12 flex-1' style={{ width: 'calc(100% - 16.66667%)', height: 'screen', marginLeft: '16rem' }}>
+      <div className=' flex flex-row p-4 mt-12 flex-1' style={{ width: 'calc(100% - 16.66667%)', height: 'screen', marginLeft: '14.5rem' }}>
         <div className='flex-1' style={{}}>
           
           {/* first div */}
