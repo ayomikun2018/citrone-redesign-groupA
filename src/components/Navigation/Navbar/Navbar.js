@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import Ellipse from "../../Pages/Dashboard/DashboardAssets/Ellipse 136.svg"
 import CitroneLogo from "../../Pages/Dashboard/DashboardAssets/citrone logo-new.svg"
 import Bell from "../../Pages/Dashboard/DashboardAssets/notification.svg";
-import leftChevron from '../../Pages/Dashboard/DashboardAssets/shape4.svg'
+import leftChevron from '../../Navigation/Navbar/NavbarAssets/left-chevron.svg'
 
 
 const Navbar = () => {

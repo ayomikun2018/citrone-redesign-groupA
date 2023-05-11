@@ -47,6 +47,11 @@
     font-size: 22px;
     
 }
+
+.sidebar-list .sidebar-row.active {
+    background-color: #FDDCDE;
+    border-right-width: 8px;
+  }
 /* .sidebar-list #active{
     background: #FDDCDE;
     color: black;
