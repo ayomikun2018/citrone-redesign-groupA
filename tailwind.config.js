@@ -12,6 +12,7 @@ module.exports = {
         'event-row' : '#F6F6F6',
         'logout-text' : '#A5A5A5',
         'black-text' : '#1A1A1A',
+        'sidebar' : '#FDDCDE'
 
       
       },
