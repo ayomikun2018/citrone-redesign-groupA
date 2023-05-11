@@ -71,11 +71,11 @@ function ProfileForm() {
             className=" hidden " 
           />
 
-          <button 
+          {/* <button 
             type="submit" 
             disabled={!selectedFile} className="flex text-black bg-[#f1f1f1] font-normal text-base  font-poppins items-center justify-center rounded-xl" style={{ width: '210px', height: '40px', marginLeft: '6rem', marginTop: '-7rem'}}>
             Upload
-          </button>
+          </button> */}
          
         </div>
           <div className="grid" style={{marginLeft: '6rem', marginTop: '-4rem'}}>
@@ -89,7 +89,7 @@ function ProfileForm() {
         <span className='ml-24 text-base font-poppins font-medium whitespace-nowrap' >*Must be JPEG, PNG, GIF and should not exceed 5MB </span>
 
       </div>
-      <img src={TrashIcon} alt='thrash-icon' className='absolute' style={{width: '26.67px', height: '26.67', left: '46%', top: '9rem'}}/>
+      <img src={TrashIcon} alt='thrash-icon' className='absolute' style={{width: '26.67px', height: '26.67', left: '48%', top: '9rem'}}/>
 
       
       
