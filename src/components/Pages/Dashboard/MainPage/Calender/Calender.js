@@ -66,7 +66,7 @@ const Calendar = () => {
 
   return (
     <React.Fragment>
-    <div className=" bg-[#fbfbfb] left-12 top-8 drop-shadow-md relative rounded-xl" style={{width: "26rem", height: "40rem"}}>
+    <div className=" bg-[#fbfbfb] left-8 top-8 drop-shadow-md relative rounded-xl" style={{width: "26rem", height: "40rem"}}>
       <div className="flex mt-4 place-content-center justify-between">
 
         {/*month-year function  */}
@@ -157,16 +157,18 @@ const Calendar = () => {
   export const AddEventButton = (props) => {
     
       return (
-        <div className=' inline-block '> 
+        <div style={{ position: "absolute", bottom: "4rem", right: "10rem", width: "fit-content" }}>
         
           {/* <Link to= "/dashboard"> */}
             <button  
               onClick={props.showAddEventModal} 
-              className="add-event-btn h-16  flex justify-center items-center bg-[#f64f59] text-white pl-8  text-sm text-center hover:bg-red-500 rounded-xl align-center"
-              style={{width: "312px", height: "60px", position: "relative", marginTop: "28rem", left: "390%"}} 
+              className=" w-80 add-event-btn flex h-16 justify-center items-center bg-[#f64f59] text-white pl-7 pr-7  text-sm text-center hover:bg-red-500 rounded-xl align-center"
+              style={{ }}
             > Add Event
             </button>
         </div>
+
+        
        
       )
     }

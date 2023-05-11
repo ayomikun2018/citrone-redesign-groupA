@@ -35,7 +35,7 @@ const SignUp = () => {
 const[mail, setMail]= useState("");
 const[pass, setPass]= useState("");
 const[confirmPass, setConfirmPass]= useState("");
-const [info, setInfo] = useState([]);
+// const [info, setInfo] = useState([]);
 const [error, setError] = useState(null);
 
 const navigate = useNavigate()
@@ -70,6 +70,7 @@ const navigate = useNavigate()
     const data = {email: mail, password: pass, confirmPassword: confirmPass}
     // console.log(data, '1')
     setError(null)
+    
       const url = "https://stutern-citrone-app.onrender.com/api/v1/users/register"
      
       const response = await fetch(url, {
@@ -90,14 +91,18 @@ const navigate = useNavigate()
       if (result.message === 'User successfully created' ){
         navigate('/dashboard')
       }
-      else {
-        setError(result.message)
+    else{
+       setError(result.message) 
       
-    console.log(error)
-    }
-      return result;
-      
+    } 
+    
+    return result;
+   
    }
+//    setError(null);
+//    setMail('')
+//    setPass('')
+//    setConfirmPass('')
 
 return (
     <div >
@@ -175,10 +180,11 @@ return (
                             <img src={GoogleIcon} alt="google Icon" className="w-5 h-5 absolute top-2.5 left-28" />
                         </div>
                     </form>
+                    {error && <span style= {{textAlign: 'center',color: 'red', fontSize: '16px',width:'10%',height:'10%', marginLeft: '8rem', fontWeight: 'bold'}}>{error}</span>}
+
                     <p className="text-base font-poppins w-full">By creating an account, you agree to our <a className="text-[#F64F59]" href='#'>Terms of Service</a></p>
                     <p className="text-base font-poppins pb-6 "> and <a className="text-[#F64F59]" href='#'>Privacy Policy</a></p>
                     <p className="text-center text-base font-poppins">Already have an account? <a className="text-[#F64F59]" href='/login'>Log In</a></p>
-                    {error && <div>{error}</div>}
 
                 </div>
 

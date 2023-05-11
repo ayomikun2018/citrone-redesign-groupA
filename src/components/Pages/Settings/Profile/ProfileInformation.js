@@ -39,10 +39,12 @@ const ProfileInformation = () => {
             onSubmit={handleSubmit}
             className='' style={{ width: "130vh", height: "150%" }}
          >
+
             <div className=' relative flex -mx-3 mb-6 mt-8 box-border font-poppins space-x-4' >
                 <div className='w-full md:w-1/2 px-3 mb-6 md:mb-0 ' style={{  width: "415px"}}>
                      <label htmlFor="firstName" 
                      className='block  tracking-wide text-base font-medium mb-2" for="grid-first-name text-black  '>
+
                         First name
                     </label>
                     <input
