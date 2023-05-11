@@ -51,6 +51,9 @@
 .sidebar-list .sidebar-row.active {
     background-color: #FDDCDE;
     border-right-width: 8px;
+    color: black;
+    font-size: 22px;
+
   }
 /* .sidebar-list #active{
     background: #FDDCDE;
